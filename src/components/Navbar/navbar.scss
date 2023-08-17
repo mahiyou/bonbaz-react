@@ -1,0 +1,34 @@
+.navbar-style{
+    .nav-link{
+        color:white;
+        display: flex;
+
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        font-weight: 700;
+        color: white;
+        .triangle-left {
+            display: inline-flex;
+        }
+    }
+    .triangle-left {
+        width: 0px;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-right: 8px solid #fff;
+        border-bottom: 8px solid transparent;
+        margin-top: 10px;
+        margin-right: 5px;
+        display: none;
+        
+    }
+    .navbar-toggler-icon{
+        background-color: #fff;
+        width: 25px;
+    }
+    @media(max-width:600px) {
+        .nav-sentences{
+            display: none;
+        }
+    }
+}
