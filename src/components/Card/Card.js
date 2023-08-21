@@ -31,9 +31,9 @@ function CardContent({ title, cost, currency, icon, trend }) {
                 <Row>
                     <Col xs={2}>
                         <img
-                            className="mb-3 ms-3"
+                            className="mb-3 ms-2"
                             src={icon}
-                            width="19"
+                            width="20"
                             alt="React Bootstrap logo"
                         />
                     </Col>
