@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Card from "./components/Card/Card";
+import Date from "./components/Date/Date"
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 function App() {
@@ -108,10 +109,9 @@ function App() {
     <div>
       <Navbar />
       <Container className="mt-4">
-        {cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}
-      </Container>
-      <Container className="mt-4">
-        {bottomCardsContent.map((bottomCardsContent, index) => <Card key={index} title={bottomCardsContent.title} cost={bottomCardsContent.cost} currency={bottomCardsContent.currency} icon={bottomCardsContent.icon} trend={bottomCardsContent.trend} />)}
+        <div>{cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}</div>
+        <Date />
+        <div>{bottomCardsContent.map((bottomCardsContent, index) => <Card key={index} title={bottomCardsContent.title} cost={bottomCardsContent.cost} currency={bottomCardsContent.currency} icon={bottomCardsContent.icon} trend={bottomCardsContent.trend} />)}</div>
       </Container>
       <Footer />
     </div>
