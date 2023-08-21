@@ -7,7 +7,7 @@ import './footer.scss'
 function Footer() {
     return (
         <div className='footer-style'>
-            <Row className="bg-primary mt-4 py-3">
+            <Row className="bg-primary mt-4 py-3 mx-0">
                 <Col className="text-center my-auto" xs={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
                     <a className="text-white text-decoration-none ms-2" href="#prices">Prices</a>
