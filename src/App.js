@@ -10,8 +10,8 @@ import TableOfCurrencies from "./components/Table/TableOfCurrencies";
 import "./app.scss";
 
 function App() {
- 
-  const [cardsContent, setCardsContent] = useState([
+
+  const [cardsContent] = useState([
     {
       title: "Gold(Once)",
       cost: 1913.83,
@@ -61,7 +61,7 @@ function App() {
       diagram: ""
     }
   ]);
-  const [bottomCardsContent, setBottomCardsContent] = useState([
+  const [bottomCardsContent] = useState([
     {
       title: "Bitcoin/BTC",
       cost: 29337.91,
@@ -111,7 +111,7 @@ function App() {
       diagram: ""
     }
   ]);
-  const [curenciesStatus, setCurenciesStatus] = useState([
+  const [curenciesStatus] = useState([
     {
       icon: "/imgs/digital-currency/US-squer.svg",
       code: "1USD",
@@ -336,13 +336,163 @@ function App() {
         trend: "down"
       },
     },
-    
-    
+
+
+  ])
+  const [coinsStatus] = useState([
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "Azadi",
+      sell:
+      {
+        amount: 25500000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "Azadi",
+      sell:
+      {
+        amount: 25500000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "Azadi",
+      sell:
+      {
+        amount: 25500000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "Azadi",
+      sell:
+      {
+        amount: 25500000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "1/2 Azadi",
+      sell:
+      {
+        amount: 25500000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "parsian 0/200",
+      sell:
+      {
+        amount: 541000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "parsian 0/200",
+      sell:
+      {
+        amount: 541000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "parsian 0/200",
+      sell:
+      {
+        amount: 541000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "parsian 0/200",
+      sell:
+      {
+        amount: 541000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/coin.svg",
+      code: "parsian 0/200",
+      sell:
+      {
+        amount: 541000,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 25400000,
+        trend: "fixed"
+      },
+    },
   ])
 
-  const halfCurenciesStatus = Math.ceil(curenciesStatus.length / 2);    
-  const firstHalfCurenciesStatus = curenciesStatus.slice(0, halfCurenciesStatus) 
-  const secondHalfCurenciesStatus = curenciesStatus.slice(halfCurenciesStatus) 
+  const [colTitleForCurrencies] = useState(['Code', 'Currency', 'count', 'sell', 'buy'])
+  const [colTitleForEmamiCoins] = useState(['Emami coins', 'sell', 'buy'])
+  const [colTitleForPersianCoins] = useState(['Persian coins', 'sell', 'buy'])
+
+  const halfCurenciesStatus = Math.ceil(curenciesStatus.length / 2);
+  const firstHalfCurenciesStatus = curenciesStatus.slice(0, halfCurenciesStatus)
+  const secondHalfCurenciesStatus = curenciesStatus.slice(halfCurenciesStatus)
+
+  const halfCoinsStatus = Math.ceil(coinsStatus.length / 2);
+  const firstHalfCoinsStatus = coinsStatus.slice(0, halfCoinsStatus)
+  const secondHalfCoinsStatus = coinsStatus.slice(halfCoinsStatus)
 
   return (
     <div>
@@ -354,10 +504,12 @@ function App() {
           <Col xs={10}>
             <Row>
               <Col xs={6}>
-                <TableOfCurrencies curenciesStatus={firstHalfCurenciesStatus} />
+                <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
+                <TableOfCurrencies tableType="coin" colTitles={colTitleForEmamiCoins} curenciesStatus={firstHalfCoinsStatus} />
               </Col>
               <Col xs={6}>
-                <TableOfCurrencies curenciesStatus={secondHalfCurenciesStatus} />
+                <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
+                <TableOfCurrencies tableType="coin" colTitles={colTitleForPersianCoins} curenciesStatus={secondHalfCoinsStatus} />
               </Col>
             </Row>
           </Col>

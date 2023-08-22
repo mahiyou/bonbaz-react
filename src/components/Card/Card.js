@@ -42,7 +42,7 @@ function CardContent({ title, cost, currency, icon, trend }) {
                             {title}
                             {trendDiv}
                         </Card.Title>
-                        <Card.Subtitle>{cost.toLocaleString()} <span>{currency}</span></Card.Subtitle>
+                        <Card.Subtitle>{cost.toLocaleString()} <span className="currency-color">{currency}</span></Card.Subtitle>
                     </Col>
                     {trendImg}
                 </Row>

@@ -2,7 +2,7 @@ import "./tableOfCurrencies.scss"
 import Table from "react-bootstrap/Table";
 
 
-export default function TableOfCurrencies({ curenciesStatus }) {
+export default function TableOfCurrencies({ tableType,curenciesStatus,colTitles}) {
         let trendDivUp = <div className="ms-2 up-trend" />;
         let trendDivDown = <div className="ms-2 down-trend" />;
 
@@ -12,34 +12,34 @@ export default function TableOfCurrencies({ curenciesStatus }) {
             {console.log(curenciesStatus)}
             <thead>
                 <tr>
-                    <th className="text-center">Code</th>
-                    <th >Currency</th>
-                    <th className="text-center">count</th>
-                    <th className="text-center">sell</th>
-                    <th className="text-center">buy</th>
+                    {colTitles.map((colTitle,index)=>
+                    <th className="text-center" key={index}>{colTitle}</th>
+                    )}
                 </tr>
             </thead>
             <tbody>
                 {curenciesStatus.map((currency, index) =>
                     <tr key={index}>
-                        <td className="text-center">
+                        <td>
                             <img
                                 className="me-2 mb-1"
                                 src={currency.icon}
-                                width="23"
+                                width="25"
                                 alt="React Bootstrap logo"
                             />
                             <span>{currency.code}</span>
                         </td>
-                        <td >{currency.currency}</td>
-                        <td className="text-center">{currency.count}</td>
+                        {(currency.currency) && <td  className="text-center">{currency.currency}</td>}
+                        {(currency.count) && <td className="text-center">{currency.count}</td>}
                         <td className="text-center">
-                            {currency.sell.amount}
+                            {currency.sell.amount.toLocaleString()}
+                            {tableType=="coin" && <span className="ms-2 currency-color">T</span>}
                             {currency.sell.trend == 'up' && trendDivUp}
                             {currency.sell.trend == 'down' && trendDivDown}
                         </td>
                         <td className="text-center">
-                            {currency.buy.amount}
+                            {currency.buy.amount.toLocaleString()}
+                            {tableType=="coin" && <span className="ms-2 currency-color">T</span>}
                             {currency.buy.trend == 'up' && trendDivUp}
                             {currency.buy.trend == 'down' && trendDivDown}
                         </td>
