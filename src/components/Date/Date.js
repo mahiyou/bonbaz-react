@@ -10,7 +10,7 @@ export default function Date() {
     const date = new DateObject();
     const datePersian = new DateObject({ calendar: persian })
     return (
-        <div className="bg-secondary my-3 p-3 rounded date">
+        <div className="bg-secondary my-4 p-3 rounded date">
             <Row>
                 <Col xs={7}>
                     <img
@@ -34,12 +34,8 @@ export default function Date() {
                         <span className='ms-2 text-customRed persianDate'>{date.format("DD MMMM YYYY", ["Date"])}</span>
                         <span className='ms-2'>{date.format("HH : mm : ss", ["Time"])}</span>
                     </div>
-
-
                 </Col>
             </Row>
-
-
         </div>
     )
 }

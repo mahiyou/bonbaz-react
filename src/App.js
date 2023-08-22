@@ -4,7 +4,13 @@ import Card from "./components/Card/Card";
 import Date from "./components/Date/Date"
 import { useState } from "react";
 import { Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import TableOfCurrencies from "./components/Table/TableOfCurrencies";
+import "./app.scss";
+
 function App() {
+ 
   const [cardsContent, setCardsContent] = useState([
     {
       title: "Gold(Once)",
@@ -105,12 +111,258 @@ function App() {
       diagram: ""
     }
   ]);
+  const [curenciesStatus, setCurenciesStatus] = useState([
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "1USD",
+      currency: "US Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "down"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "2USD",
+      currency: "US Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "down"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "fixed"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "fixed"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "up"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "down"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    {
+      icon: "/imgs/digital-currency/US-squer.svg",
+      code: "3USD",
+      currency: "CAD Canadian Dollar",
+      count: 1,
+      sell:
+      {
+        amount: 45600,
+        trend: "up"
+      },
+      buy:
+      {
+        amount: 48500,
+        trend: "down"
+      },
+    },
+    
+    
+  ])
+
+  const halfCurenciesStatus = Math.ceil(curenciesStatus.length / 2);    
+  const firstHalfCurenciesStatus = curenciesStatus.slice(0, halfCurenciesStatus) 
+  const secondHalfCurenciesStatus = curenciesStatus.slice(halfCurenciesStatus) 
+
   return (
     <div>
       <Navbar />
       <Container className="mt-4">
         <div>{cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}</div>
         <Date />
+        <Row>
+          <Col xs={10}>
+            <Row>
+              <Col xs={6}>
+                <TableOfCurrencies curenciesStatus={firstHalfCurenciesStatus} />
+              </Col>
+              <Col xs={6}>
+                <TableOfCurrencies curenciesStatus={secondHalfCurenciesStatus} />
+              </Col>
+            </Row>
+          </Col>
+          <Col xs={2}></Col>
+        </Row>
         <div>{bottomCardsContent.map((bottomCardsContent, index) => <Card key={index} title={bottomCardsContent.title} cost={bottomCardsContent.cost} currency={bottomCardsContent.currency} icon={bottomCardsContent.icon} trend={bottomCardsContent.trend} />)}</div>
       </Container>
       <Footer />
