@@ -1,13 +1,17 @@
 import Navbar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Card from "./components/Card/Card";
-import Date from "./components/Date/Date"
+import Date from "./components/Date/Date";
+import Ads from "./components/Ads/Ads";
+import CurrencyConverter from "./components/CurrencyConverter/CurrencyConverter";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import TableOfCurrencies from "./components/Table/TableOfCurrencies";
 import "./app.scss";
+
+
 
 function App() {
 
@@ -494,6 +498,19 @@ function App() {
   const firstHalfCoinsStatus = coinsStatus.slice(0, halfCoinsStatus)
   const secondHalfCoinsStatus = coinsStatus.slice(halfCoinsStatus)
 
+  function addRialToCurrencies() {
+    return (
+      [{icon: "/imgs/flag-of-iran.svg",
+        code: "Toman",
+        currency: "Iranian Rial",
+        sell:
+        {},
+        buy:
+        {},
+      },...curenciesStatus,]
+    )
+  }
+
   return (
     <div>
       <Navbar />
@@ -513,7 +530,11 @@ function App() {
               </Col>
             </Row>
           </Col>
-          <Col xs={2}></Col>
+          <Col xs={2}>
+
+            <CurrencyConverter curenciesStatus={addRialToCurrencies()} />
+            <Ads />
+          </Col>
         </Row>
         <div>{bottomCardsContent.map((bottomCardsContent, index) => <Card key={index} title={bottomCardsContent.title} cost={bottomCardsContent.cost} currency={bottomCardsContent.currency} icon={bottomCardsContent.icon} trend={bottomCardsContent.trend} />)}</div>
       </Container>

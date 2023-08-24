@@ -9,7 +9,6 @@ export default function TableOfCurrencies({ tableType,curenciesStatus,colTitles}
     return (
         
         <Table responsive className="table mb-4">
-            {console.log(curenciesStatus)}
             <thead>
                 <tr>
                     {colTitles.map((colTitle,index)=>

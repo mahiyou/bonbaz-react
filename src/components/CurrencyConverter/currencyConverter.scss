@@ -1,0 +1,37 @@
+.currencyConverter{
+    border: 1px solid #282938;
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 13px;
+    .icon-in-converter{
+        color: #333A4B;
+    }
+    .title{
+        font-size: 12px;
+    }
+    .converter-dropden{
+        border-radius: 7px;
+        background: #717278;
+        .btn{
+            width: 100%;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: left;
+            overflow: hidden;
+        }
+        .dropdown-item{
+            font-size: 12px;
+        }
+        .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active {
+            --bs-dropdown-link-hover-color:#717278;
+            --bs-dropdown-link-hover-bg:none;
+            --bs-dropdown-link-active-bg: none;
+        }
+    }
+    .amountOfCurrencyInput{
+        border: solid 1px #282938;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
