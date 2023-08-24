@@ -23,7 +23,7 @@ export default function TableOfCurrencies({ tableType,curenciesStatus,colTitles}
                             <img
                                 className="me-2 mb-1"
                                 src={currency.icon}
-                                width="25"
+                                width="24"
                                 alt="React Bootstrap logo"
                             />
                             <span>{currency.code}</span>

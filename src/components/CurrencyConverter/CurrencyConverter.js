@@ -1,12 +1,14 @@
 import "./currencyConverter.scss"
 import { useState } from "react";
-import { DropdownButton, Dropdown, Form } from "react-bootstrap";
+import { DropdownButton, Dropdown, Form, Button} from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightLeft, faUpDown } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function CurrencyConverter({ curenciesStatus }) {
 
+    const [currencyAmount, setCurrencyAmount] = useState(0);
+    const [targetCurrencyAmount, setTargetCurrencyAmount] = useState(0);
 
     const [selected, setSelected] = useState({ key: 1, eventKey: 1 });
     const handleSelect = (key, event) => {
@@ -16,6 +18,14 @@ export default function CurrencyConverter({ curenciesStatus }) {
     const handleSelectTargetCurrency = (key, event) => {
         setSelectedTargetCurrency({ key, value: event.target.value });
     };
+    function convert(value){
+        setCurrencyAmount(value)
+        setTargetCurrencyAmount(value*curenciesStatus[selected.key].sell.amount/curenciesStatus[selectedTargetCurrency.key].sell.amount)
+    }
+    function convertReverze(value){
+        setTargetCurrencyAmount(value)
+        setCurrencyAmount(value*curenciesStatus[selectedTargetCurrency.key].sell.amount/curenciesStatus[selected.key].sell.amount)
+    }
     function getTilte(key) {
         return (
             <span>
@@ -30,8 +40,8 @@ export default function CurrencyConverter({ curenciesStatus }) {
     }
     return (
         <div className="currencyConverter mt-5 mb-4">
-            <div className="fw-bold"><FontAwesomeIcon className="icon-in-converter mx-1" size="sm" icon={faRightLeft} />Currency Converter</div>
-            <div className="title mt-4 mb-2">Currency I Have</div>
+            <div className="fw-bold"><FontAwesomeIcon className="icon-in-converter mx-2" size="lg" icon={faRightLeft} />Currency Converter</div>
+            <div className="my-4">Currency I Have</div>
             <DropdownButton
                 className="converter-dropden"
                 variant="success"
@@ -51,9 +61,9 @@ export default function CurrencyConverter({ curenciesStatus }) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" type="number" placeholder="0" min={0} typeof="number"/>
+            <Form.Control className="my-2 amountOfCurrencyInput" type="number" placeholder="0" min={0} value={currencyAmount} onChange={(e)=>{convert(e.target.value)}}/>
             <div className="m-4 d-flex justify-content-center text-customGreen"><FontAwesomeIcon size="2xl" className="up-icon-in-convert" icon={faUpDown} /></div>
-            <div className="title my-4">Currency I Want</div>
+            <div className="my-4">Currency I Want</div>
             <DropdownButton
                 className="converter-dropden"
                 variant="success"
@@ -73,7 +83,7 @@ export default function CurrencyConverter({ curenciesStatus }) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" type="number" placeholder="0" min={0} typeof="number"/>
+            <Form.Control className="my-2 amountOfCurrencyInput"  placeholder="0" type="number" min={0} value={targetCurrencyAmount} onChange={(e)=>{convertReverze(e.target.value)}} />
         </div>
 
     );

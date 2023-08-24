@@ -16,14 +16,14 @@
     }
 
     tbody {
-        tr {
+        tr {  
+            align-items: center;
             td {
+                vertical-align: middle;
+                white-space: nowrap; 
                 border-top: solid 1px #282938;
                 border-bottom: solid 1px #282938;
-                padding-top: 13px;
-                padding-bottom: 13px;
-               
-
+                padding:  13px 5px;
                 &:first-child {
                     border-left: solid 1px #282938;
                     border-top-left-radius: 7px;

@@ -139,7 +139,7 @@ function App() {
       count: 1,
       sell:
       {
-        amount: 45600,
+        amount: 47,
         trend: "up"
       },
       buy:
@@ -504,9 +504,15 @@ function App() {
         code: "Toman",
         currency: "Iranian Rial",
         sell:
-        {},
+        {
+          amount: 1,
+          trend: "fixed"
+        },
         buy:
-        {},
+        {
+          amount: 1,
+          trend: "fixed"
+        },
       },...curenciesStatus,]
     )
   }
@@ -518,19 +524,19 @@ function App() {
         <div>{cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}</div>
         <Date />
         <Row>
-          <Col xs={10}>
+          <Col xs={9}>
             <Row>
-              <Col xs={6}>
+              <Col xs={6} className="px-1">
                 <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
                 <TableOfCurrencies tableType="coin" colTitles={colTitleForEmamiCoins} curenciesStatus={firstHalfCoinsStatus} />
               </Col>
-              <Col xs={6}>
+              <Col xs={6} className="px-1">
                 <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
                 <TableOfCurrencies tableType="coin" colTitles={colTitleForPersianCoins} curenciesStatus={secondHalfCoinsStatus} />
               </Col>
             </Row>
           </Col>
-          <Col xs={2}>
+          <Col xs={3}>
 
             <CurrencyConverter curenciesStatus={addRialToCurrencies()} />
             <Ads />
