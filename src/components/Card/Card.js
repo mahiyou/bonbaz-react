@@ -26,6 +26,9 @@ function CardContent({ title, cost, currency, icon, trend }) {
         />
     }
     return (
+        <div className="d-inline px-3 px-md-1">
+
+        
         <Card className="card">
             <Card.Body>
                 <Row>
@@ -48,6 +51,7 @@ function CardContent({ title, cost, currency, icon, trend }) {
                 </Row>
             </Card.Body>
         </Card>
+        </div>
     )
 }
 export default CardContent;

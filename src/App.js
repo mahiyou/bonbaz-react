@@ -520,8 +520,11 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Container className="mt-4 ">
-        <div>{cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}</div>
+      <Container className="mt-4">
+        <div className="hidden-md-down text-center">
+          {cardsContent.map((cardContent, index) => 
+          <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}
+          </div>
         <Date />
         <Row className="align-items-center justify-content-center">
           <Col xs={12} lg={9}>
@@ -545,7 +548,8 @@ function App() {
             <Ads />
           </Col>
         </Row>
-        <div>{bottomCardsContent.map((bottomCardsContent, index) => <Card key={index} title={bottomCardsContent.title} cost={bottomCardsContent.cost} currency={bottomCardsContent.currency} icon={bottomCardsContent.icon} trend={bottomCardsContent.trend} />)}</div>
+        <div className="hidden-lg-up my-4 text-center">{cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}</div>
+        <div className="my-4 text-center">{bottomCardsContent.map((bottomCardsContent, index) => <Card key={index} title={bottomCardsContent.title} cost={bottomCardsContent.cost} currency={bottomCardsContent.currency} icon={bottomCardsContent.icon} trend={bottomCardsContent.trend} />)}</div>
       </Container>
       <Footer />
     </div>
