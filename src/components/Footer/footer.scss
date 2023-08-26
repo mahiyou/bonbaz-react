@@ -2,5 +2,16 @@
     .footer-sentence{
         color: #717278;
         font-size: 12px;
-    }   
+    } 
+    @media(max-width:768px) {
+        .hidden-md-down{
+            display: none;
+        }
+    }
+    @media(min-width:768px) {
+        .hidden-lg-up{
+            display: none;
+        }
+    }
+
 }
