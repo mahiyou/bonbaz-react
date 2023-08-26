@@ -12,7 +12,7 @@ export default function Date() {
     return (
         <div className="bg-secondary my-4 p-3 rounded date">
             <Row>
-                <Col xs={7}>
+                <Col xs={12} lg={7}>
                     <img
                         className='d-inline mb-1'
                         src="/imgs/dot-in-date.svg"
@@ -21,8 +21,8 @@ export default function Date() {
                     />
                     <p className="sentence my-0 d-inline">Live price of gold, coin, dollars and Iranian currencies <span className="sub-sentence">*All prices are in Iranian Toman*</span></p>
                 </Col>
-                <Col xs={5}>
-                    <div className='float-end date-content'>
+                <Col xs={12} lg={5}>
+                    <div className='date-content'>
                         <img
                             className='d-inline'
                             src="/imgs/flag-of-iran.svg"

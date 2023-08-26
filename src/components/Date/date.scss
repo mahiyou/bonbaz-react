@@ -14,5 +14,12 @@
     }
     .date-content{
         font-weight: 600;
+        float: right;
+    }
+    @media(max-width:992px) {
+        .date-content{
+            float: left;
+            margin-top: 20px;
+        }
     }
 }
