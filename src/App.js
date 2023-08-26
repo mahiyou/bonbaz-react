@@ -136,7 +136,7 @@ function App() {
       icon: "/imgs/digital-currency/US-squer.svg",
       code: "2USD",
       currency: "US Dollar",
-      count: 1,
+      count: 100,
       sell:
       {
         amount: 47,
@@ -152,7 +152,7 @@ function App() {
       icon: "/imgs/digital-currency/US-squer.svg",
       code: "3USD",
       currency: "CAD Canadian Dollar",
-      count: 1,
+      count: 200,
       sell:
       {
         amount: 45600,
@@ -486,7 +486,7 @@ function App() {
     },
   ])
 
-  const [colTitleForCurrencies] = useState(['Code', 'Currency', 'count', 'sell', 'buy'])
+  const [colTitleForCurrencies] = useState(['Code', 'Currency', 'sell', 'buy'])
   const [colTitleForEmamiCoins] = useState(['Emami coins', 'sell', 'buy'])
   const [colTitleForPersianCoins] = useState(['Persian coins', 'sell', 'buy'])
 
@@ -520,24 +520,27 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Container className="mt-4">
+      <Container className="mt-4 ">
         <div>{cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}</div>
         <Date />
-        <Row>
-          <Col xs={9}>
+        <Row className="align-items-center justify-content-center">
+          <Col xs={12} lg={9}>
             <Row>
-              <Col xs={6} className="px-1">
+              <Col lg={6} xs={12} className="px-1">
                 <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
+              </Col>
+              <Col lg={6} xs={12} className="px-1">
+                <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
+              </Col>
+              <Col lg={6} xs={12} className="px-1">
                 <TableOfCurrencies tableType="coin" colTitles={colTitleForEmamiCoins} curenciesStatus={firstHalfCoinsStatus} />
               </Col>
-              <Col xs={6} className="px-1">
-                <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
+              <Col lg={6} xs={12} className="px-1">
                 <TableOfCurrencies tableType="coin" colTitles={colTitleForPersianCoins} curenciesStatus={secondHalfCoinsStatus} />
               </Col>
             </Row>
           </Col>
-          <Col xs={3}>
-
+          <Col xs={12} sm={8} lg={3}>
             <CurrencyConverter curenciesStatus={addRialToCurrencies()} />
             <Ads />
           </Col>
