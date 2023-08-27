@@ -39,7 +39,7 @@ export default function CurrencyConverter({ curenciesStatus }) {
         )
     }
     return (
-        <div className="currencyConverter mt-5 mb-4">
+        <div className="currencyConverter mt-5 mt-lg-0 mt-xl-5 mb-4">
             <div className="fw-bold"><FontAwesomeIcon className="icon-in-converter mx-2" size="lg" icon={faRightLeft} />Currency Converter</div>
             <div className="my-4">Currency I Have</div>
             <DropdownButton
