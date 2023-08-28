@@ -1,0 +1,328 @@
+{
+    "currencies": [
+      {
+        "name": "UAE Dirham",
+        "code": "aed",
+        "count": 1,
+        "price_buy": "13490",
+        "price_sell": "13540",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Afghan Afg",
+        "code": "afn",
+        "count": 1,
+        "price_buy": "585",
+        "price_sell": "590",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Armenian",
+        "code": "amd",
+        "count": 10,
+        "price_buy": "1270",
+        "price_sell": "1275",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Australian",
+        "code": "aud",
+        "count": 1,
+        "price_buy": "31450",
+        "price_sell": "31550",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Azerbaijan",
+        "code": "azn",
+        "count": 1,
+        "price_buy": "28800",
+        "price_sell": "28900",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Bahraini D",
+        "code": "bhd",
+        "count": 1,
+        "price_buy": "130050",
+        "price_sell": "130550",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Canadian D",
+        "code": "cad",
+        "count": 1,
+        "price_buy": "36100",
+        "price_sell": "36200",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Swiss Fran",
+        "code": "chf",
+        "count": 1,
+        "price_buy": "55600",
+        "price_sell": "55700",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Chinese Yu",
+        "code": "cny",
+        "count": 1,
+        "price_buy": "6735",
+        "price_sell": "6755",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Danish Kro",
+        "code": "dkk",
+        "count": 1,
+        "price_buy": "7115",
+        "price_sell": "7135",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Euro",
+        "code": "eur",
+        "count": 1,
+        "price_buy": "53050",
+        "price_sell": "53150",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "British Po",
+        "code": "gbp",
+        "count": 1,
+        "price_buy": "61750",
+        "price_sell": "61950",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Hong Kong ",
+        "code": "hkd",
+        "count": 1,
+        "price_buy": "6250",
+        "price_sell": "6280",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Indian Rup",
+        "code": "inr",
+        "count": 1,
+        "price_buy": "590",
+        "price_sell": "595",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Iraqi D",
+        "code": "iqd",
+        "count": 100,
+        "price_buy": "3750",
+        "price_sell": "3760",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Japanese",
+        "code": "jpy",
+        "count": 10,
+        "price_buy": "3355",
+        "price_sell": "3365",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Kuwaiti Di",
+        "code": "kwd",
+        "count": 1,
+        "price_buy": "159200",
+        "price_sell": "159600",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Ringgit",
+        "code": "myr",
+        "count": 1,
+        "price_buy": "10500",
+        "price_sell": "10600",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Norwegian ",
+        "code": "nok",
+        "count": 1,
+        "price_buy": "4590",
+        "price_sell": "4605",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Omani Rial",
+        "code": "omr",
+        "count": 1,
+        "price_buy": "127600",
+        "price_sell": "127900",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Qatari Riy",
+        "code": "qar",
+        "count": 1,
+        "price_buy": "13450",
+        "price_sell": "13550",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Russian Ru",
+        "code": "rub",
+        "count": 1,
+        "price_buy": "515",
+        "price_sell": "520",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "KSA Riyal",
+        "code": "sar",
+        "count": 1,
+        "price_buy": "13050",
+        "price_sell": "13150",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Swedish Kr",
+        "code": "sek",
+        "count": 1,
+        "price_buy": "4440",
+        "price_sell": "4455",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Singapore ",
+        "code": "sgd",
+        "count": 1,
+        "price_buy": "36200",
+        "price_sell": "36300",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Thai Baht",
+        "code": "thb",
+        "count": 1,
+        "price_buy": "1395",
+        "price_sell": "1400",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "Turkish Li",
+        "code": "try",
+        "count": 1,
+        "price_buy": "1835",
+        "price_sell": "1855",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      },
+      {
+        "name": "US Dollar",
+        "code": "usd",
+        "count": 1,
+        "price_buy": "49150",
+        "price_sell": "49250",
+        "updated_at": "2023-06-27T12:00:30.000000Z"
+      }
+    ],
+    "golds": {
+      "gram": "2313125",
+      "mithqal": "10020000",
+      "ounce": "1914.89",
+      "coins": [
+        {
+          "name": "emami",
+          "price_buy": "27500000",
+          "price_sell": "27900000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "azadi",
+          "price_buy": "24500000",
+          "price_sell": "25000000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "nim",
+          "price_buy": "14650000",
+          "price_sell": "14950000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "robe",
+          "price_buy": "9750000",
+          "price_sell": "9950000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "grami",
+          "price_buy": "5600000",
+          "price_sell": "5850000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "parsian_100",
+          "price_buy": "5600000",
+          "price_sell": "5850000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "parsian_200",
+          "price_buy": "485000",
+          "price_sell": "541000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "parsian_300",
+          "price_buy": "706000",
+          "price_sell": "776000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "parsian_400",
+          "price_buy": "985000",
+          "price_sell": "1012000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        },
+        {
+          "name": "parsian_500",
+          "price_buy": "1100000",
+          "price_sell": "1248000",
+          "updated_at": "2023-06-27T12:00:30.000000Z"
+        }
+      ]
+    },
+    "crypto_currencies": [
+      {
+        "name": "Bitcoin",
+        "code": "BTC",
+        "price": "26059.3"
+      },
+      {
+        "name": "Ethereum",
+        "code": "ETH",
+        "price": "1833.03"
+      },
+      {
+        "name": "Tron",
+        "code": "TRX",
+        "price": "0.07744"
+      },
+      {
+        "name": "Cardano",
+        "code": "ADA",
+        "price": "0.29094"
+      },
+      {
+        "name": "Polkadot",
+        "code": "DOT",
+        "price": "4.9951"
+      },
+      {
+        "name": "Dogecoin",
+        "code": "DOGE",
+        "price": "0.7463"
+      }
+    ]
+  }
+  

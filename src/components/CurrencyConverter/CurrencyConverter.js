@@ -20,21 +20,21 @@ export default function CurrencyConverter({ curenciesStatus }) {
     };
     function convert(value){
         setCurrencyAmount(value)
-        setTargetCurrencyAmount(value*curenciesStatus[selected.key].sell.amount/curenciesStatus[selectedTargetCurrency.key].sell.amount)
+        setTargetCurrencyAmount(value*curenciesStatus[selected.key].price_sell/curenciesStatus[selectedTargetCurrency.key].price_sell)
     }
     function convertReverze(value){
         setTargetCurrencyAmount(value)
-        setCurrencyAmount(value*curenciesStatus[selectedTargetCurrency.key].sell.amount/curenciesStatus[selected.key].sell.amount)
+        setCurrencyAmount(value*curenciesStatus[selectedTargetCurrency.key].price_sell/curenciesStatus[selected.key].price_sell)
     }
     function getTilte(key) {
         return (
             <span>
                 <img
                     className="me-1 mb-1"
-                    src={curenciesStatus[key].icon}
+                    src={'/imgs/digital-currency/BTC-icon.svg'}
                     width="18"
                     alt="React Bootstrap logo" />
-                <span>{curenciesStatus[key].code} - {curenciesStatus[key].currency}</span>
+                {curenciesStatus[key] && <span>{curenciesStatus[key].code} - {curenciesStatus[key].name}</span>}
             </span>
         )
     }
@@ -52,11 +52,11 @@ export default function CurrencyConverter({ curenciesStatus }) {
                     <Dropdown.Item key={index} eventKey={index}>
                         <img
                             className="me-1 mb-1"
-                            src={item.icon}
+                            src={'/imgs/digital-currency/BTC-icon.svg'}
                             width="18"
                             alt="React Bootstrap logo"
                         />
-                        {item.code}{item.currency}
+                        {item.code}{item.name}
                     </Dropdown.Item>
                 )
                 )}
@@ -74,11 +74,11 @@ export default function CurrencyConverter({ curenciesStatus }) {
                     <Dropdown.Item key={index} eventKey={index}>
                         <img
                             className="me-1 mb-1"
-                            src={item.icon}
+                            src={'/imgs/digital-currency/BTC-icon.svg'}
                             width="18"
                             alt="React Bootstrap logo"
                         />
-                        {item.code}{item.currency}
+                        {item.code}{item.name}
                     </Dropdown.Item>
                 )
                 )}

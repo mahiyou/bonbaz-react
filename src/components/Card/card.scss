@@ -17,14 +17,15 @@
         --bs-card-spacer-y:0px
     }
     .card-title{
+        white-space: nowrap; 
         font-size: 15px;
-        margin-left: 7px;
+        margin-left: 2px;
         margin-right: 7px;
     }
     .card-subtitle{
         font-size: 19px;
         font-weight: 600;
-        margin-left: 7px;
+        margin-left: 2px;
         margin-right: 7px;
         .currency-color{
             color:#333A4B;
