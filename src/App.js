@@ -4,7 +4,7 @@ import Card from "./components/Card/Card";
 import Date from "./components/Date/Date";
 import Ads from "./components/Ads/Ads";
 import CurrencyConverter from "./components/CurrencyConverter/CurrencyConverter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -14,506 +14,66 @@ import "./app.scss";
 
 
 function App() {
+  const [currencies, setCurrencies] = useState([]);
+  const [coins, setCoins] = useState([]);
+  const [topCardCurrencies, setTopCardCurrencies] = useState([]);
+  const [cryptoCurrencies, setCryptoCurrencies] = useState([]);
+  const [serverError, setServerError] = useState(false);
 
-  const [cardsContent] = useState([
-    {
-      title: "Gold(Once)",
-      cost: 1913.83,
-      currency: "$",
-      icon: "/imgs/coin-in-cards.svg",
-      trend: "up",
-      diagram: ""
-    },
-    {
-      title: "Gold(Gram)",
-      cost: 2320051,
-      currency: "T",
-      icon: "/imgs/coin-in-cards.svg",
-      trend: "down",
-      diagram: ""
-    },
-    {
-      title: "Gold(Mithqal)",
-      cost: 10058000,
-      currency: "T",
-      icon: "/imgs/coin-in-cards.svg",
-      trend: "up",
-      diagram: ""
-    },
-    {
-      title: "Gold(Emami)",
-      cost: 28100000,
-      currency: "T",
-      icon: "/imgs/coin-in-cards.svg",
-      trend: "down",
-      diagram: ""
-    },
-    {
-      title: "Euro/IRR",
-      cost: 54050,
-      currency: "T",
-      icon: "/imgs/euro-icon.svg",
-      trend: "fixed",
-      diagram: ""
-    },
-    {
-      title: "Us Dollar/IRR",
-      cost: 49400,
-      currency: "T",
-      icon: "/imgs/dollar-icon.svg",
-      trend: "fixed",
-      diagram: ""
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch('/mocks/currencies.json');
+        const data = await res.json()
+        setCurrencies(data.currencies);
+        setCoins(data.golds.coins);
+        setCryptoCurrencies(data.crypto_currencies);
+        setTopCardCurrencies([
+          {name:"Gold (Once)",price:data.golds.ounce, icon:"/imgs/currencies/gold-card.svg"},
+          {name:"Gold (Gram)",price:data.golds.gram, icon:"/imgs/currencies/gold-card.svg"},
+          {name:"Gold (Mithqal)",price:data.golds.mithqal, icon:"/imgs/currencies/gold-card.svg"},
+          {name:"Gold (Emami)" , price:fidePrice("emami",data.golds.coins), icon:"/imgs/currencies/gold-card.svg"},
+          {name:"Euro / IRR" , price:fidePrice("Euro",data.currencies), icon:"/imgs/currencies/euro-card.svg"},
+          {name:"US Dollar / IRR" , price:fidePrice("US Dollar",data.currencies), icon:"/imgs/currencies/usdollar-card.svg"},
+        ]);
+      }
+      catch (e) {
+        setServerError(true);
+      }
     }
-  ]);
-  const [bottomCardsContent] = useState([
-    {
-      title: "Bitcoin/BTC",
-      cost: 29337.91,
-      currency: "$",
-      icon: "/imgs/digital-currency/BTC-icon.svg",
-      trend: "up",
-      diagram: ""
-    },
-    {
-      title: "Ethereum/ETH",
-      cost: 1833.03,
-      currency: "$",
-      icon: "/imgs/digital-currency/Eth-icon.svg",
-      trend: "up",
-      diagram: ""
-    },
-    {
-      title: "TRON/TRX",
-      cost: 0.07744,
-      currency: "$",
-      icon: "/imgs/digital-currency/TRX-icon.svg",
-      trend: "down",
-      diagram: ""
-    },
-    {
-      title: "Cardano/ADA",
-      cost: 0.29094,
-      currency: "$",
-      icon: "/imgs/digital-currency/ADA-icon.svg",
-      trend: "up",
-      diagram: ""
-    },
-    {
-      title: "Polkadot/DOT",
-      cost: 4.9951,
-      currency: "$",
-      icon: "/imgs/digital-currency/DOT-icon.svg",
-      trend: "fixed",
-      diagram: ""
-    },
-    {
-      title: "Dogecoin/DOGE",
-      cost: 0.0746300,
-      currency: "$",
-      icon: "/imgs/digital-currency/DOGE-icon.svg",
-      trend: "up",
-      diagram: ""
-    }
-  ]);
-  const [curenciesStatus] = useState([
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "1USD",
-      currency: "US Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "down"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "2USD",
-      currency: "US Dollar",
-      count: 100,
-      sell:
-      {
-        amount: 47,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 200,
-      sell:
-      {
-        amount: 45600,
-        trend: "down"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "fixed"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "up"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "down"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/US-squer.svg",
-      code: "3USD",
-      currency: "CAD Canadian Dollar",
-      count: 1,
-      sell:
-      {
-        amount: 45600,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 48500,
-        trend: "down"
-      },
-    },
+    fetchData();
+  }, [])
 
+  function fidePrice(curName,targetArray){
+    let index = targetArray.findIndex(cur => cur.name == curName)
+    return targetArray[index].price_buy;
+  }
 
-  ])
-  const [coinsStatus] = useState([
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "Azadi",
-      sell:
-      {
-        amount: 25500000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "Azadi",
-      sell:
-      {
-        amount: 25500000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "Azadi",
-      sell:
-      {
-        amount: 25500000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "Azadi",
-      sell:
-      {
-        amount: 25500000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "1/2 Azadi",
-      sell:
-      {
-        amount: 25500000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "parsian 0/200",
-      sell:
-      {
-        amount: 541000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "parsian 0/200",
-      sell:
-      {
-        amount: 541000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "parsian 0/200",
-      sell:
-      {
-        amount: 541000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "parsian 0/200",
-      sell:
-      {
-        amount: 541000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-    {
-      icon: "/imgs/digital-currency/coin.svg",
-      code: "parsian 0/200",
-      sell:
-      {
-        amount: 541000,
-        trend: "up"
-      },
-      buy:
-      {
-        amount: 25400000,
-        trend: "fixed"
-      },
-    },
-  ])
+ 
+
 
   const [colTitleForCurrencies] = useState(['Code', 'Currency', 'sell', 'buy'])
   const [colTitleForEmamiCoins] = useState(['Emami coins', 'sell', 'buy'])
   const [colTitleForPersianCoins] = useState(['Persian coins', 'sell', 'buy'])
 
-  const halfCurenciesStatus = Math.ceil(curenciesStatus.length / 2);
-  const firstHalfCurenciesStatus = curenciesStatus.slice(0, halfCurenciesStatus)
-  const secondHalfCurenciesStatus = curenciesStatus.slice(halfCurenciesStatus)
+  const halfCurenciesStatus = Math.ceil(currencies.length / 2);
+  const firstHalfCurenciesStatus = currencies.slice(0, halfCurenciesStatus)
+  const secondHalfCurenciesStatus = currencies.slice(halfCurenciesStatus)
 
-  const halfCoinsStatus = Math.ceil(coinsStatus.length / 2);
-  const firstHalfCoinsStatus = coinsStatus.slice(0, halfCoinsStatus)
-  const secondHalfCoinsStatus = coinsStatus.slice(halfCoinsStatus)
+  const halfCoinsStatus = Math.ceil(coins.length / 2);
+  const firstHalfCoinsStatus = coins.slice(0, halfCoinsStatus)
+  const secondHalfCoinsStatus = coins.slice(halfCoinsStatus)
 
   function addRialToCurrencies() {
     return (
-      [{icon: "/imgs/flag-of-iran.svg",
+      [{
         code: "Toman",
-        currency: "Iranian Rial",
-        sell:
-        {
-          amount: 1,
-          trend: "fixed"
-        },
-        buy:
-        {
-          amount: 1,
-          trend: "fixed"
-        },
-      },...curenciesStatus,]
+        name: "Iranian Rial",
+        price_sell:"1",
+        price_buy:"1",
+        count:1,
+        updated_at: ""
+      }, ...currencies,]
     )
   }
 
@@ -522,11 +82,11 @@ function App() {
       <Navbar />
       <Container className="mt-4">
         <div className="hidden-md-down text-center">
-          {cardsContent.map((cardContent, index) => 
-          <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}
-          </div>
+          {topCardCurrencies.map((importantCurrency, index) =>
+            <Card key={index} targetCurrency={"T"} currency = {importantCurrency} />)}
+        </div>
         <Date />
-        <Row className="align-items-center justify-content-center">
+        <Row className="justify-content-center">
           <Col xs={12} lg={9}>
             <Row>
               <Col lg={6} xs={12} className="px-1">
@@ -548,8 +108,8 @@ function App() {
             <Ads />
           </Col>
         </Row>
-        <div className="hidden-lg-up my-4 text-center">{cardsContent.map((cardContent, index) => <Card key={index} title={cardContent.title} cost={cardContent.cost} currency={cardContent.currency} icon={cardContent.icon} trend={cardContent.trend} />)}</div>
-        <div className="hidden-md-down my-4 text-center">{bottomCardsContent.map((bottomCardsContent, index) => <Card key={index} title={bottomCardsContent.title} cost={bottomCardsContent.cost} currency={bottomCardsContent.currency} icon={bottomCardsContent.icon} trend={bottomCardsContent.trend} />)}</div>
+        <div className="hidden-lg-up my-4 text-center">{topCardCurrencies.map((importantCurrency, index) => <Card key={index} targetCurrency={"T"} currency = {importantCurrency} />)}</div>
+        <div className="hidden-md-down my-4 text-center">{cryptoCurrencies.map((cryptoCurrency, index) => <Card key={index} targetCurrency={"$"} currency = {cryptoCurrency} icon = {`/imgs/currencies/${cryptoCurrency.code}-card.svg`} />)}</div>
       </Container>
       <Footer />
     </div>
