@@ -3,6 +3,7 @@ import { useState } from "react";
 import { DropdownButton, Dropdown, Form, Button} from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightLeft, faUpDown } from '@fortawesome/free-solid-svg-icons'
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 
 export default function CurrencyConverter({ curenciesStatus }) {
@@ -29,12 +30,8 @@ export default function CurrencyConverter({ curenciesStatus }) {
     function getTilte(key) {
         return (
             <span>
-                <img
-                    className="me-1 mb-1"
-                    src={'/imgs/digital-currency/BTC-icon.svg'}
-                    width="18"
-                    alt="React Bootstrap logo" />
-                {curenciesStatus[key] && <span>{curenciesStatus[key].code} - {curenciesStatus[key].name}</span>}
+                <span className={`me-2 rounded-1 fi fi-${curenciesStatus[key].code.slice(0, 2)}`}></span>
+                {curenciesStatus[key] && <span>{(curenciesStatus[key].code).toUpperCase()} - {curenciesStatus[key].name}</span>}
             </span>
         )
     }
@@ -50,13 +47,8 @@ export default function CurrencyConverter({ curenciesStatus }) {
                 {curenciesStatus.map((item, index) =>
                 (
                     <Dropdown.Item key={index} eventKey={index}>
-                        <img
-                            className="me-1 mb-1"
-                            src={'/imgs/digital-currency/BTC-icon.svg'}
-                            width="18"
-                            alt="React Bootstrap logo"
-                        />
-                        {item.code}{item.name}
+                        <span className={`me-2 rounded-1 fi fi-${item.code.slice(0, 2)}`}></span>
+                        {(item.code).toUpperCase()} - {item.name}
                     </Dropdown.Item>
                 )
                 )}
@@ -72,13 +64,8 @@ export default function CurrencyConverter({ curenciesStatus }) {
                 {curenciesStatus.map((item, index) =>
                 (
                     <Dropdown.Item key={index} eventKey={index}>
-                        <img
-                            className="me-1 mb-1"
-                            src={'/imgs/digital-currency/BTC-icon.svg'}
-                            width="18"
-                            alt="React Bootstrap logo"
-                        />
-                        {item.code}{item.name}
+                        <span className={`me-2 rounded-1 fi fi-${item.code.slice(0, 2)}`}></span>
+                        {(item.code.toUpperCase())} - {item.name}
                     </Dropdown.Item>
                 )
                 )}
