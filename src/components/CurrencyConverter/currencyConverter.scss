@@ -16,7 +16,8 @@
             overflow: hidden;
         }
         .dropdown-item{
-            font-size: 13px;
+            font-size: 12.5px;
+            line-height: 27px;
         }
         .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active {
             --bs-dropdown-link-hover-color:#717278;

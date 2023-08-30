@@ -63,7 +63,7 @@ function Home() {
     function addRialToCurrencies() {
         return (
             [{
-                code: "Toman",
+                code: "irt",
                 name: "Iranian Rial",
                 price_sell: "1",
                 price_buy: "1",
