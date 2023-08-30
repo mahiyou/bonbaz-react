@@ -1,0 +1,74 @@
+:root {
+    --rmdp-primary-customColor: #f49ba5;
+    --rmdp-today-customColor: #F55D6F;
+}
+.calendar {
+    .input{
+        border: 1px solid var(--bs-primary);
+        border-radius: 7px;
+        box-shadow: none;
+        padding: 8px;
+    }
+    .button{
+        color: white;
+        width: 100%;
+    }
+    .select{
+        border: none;
+        font-size: 14px;
+        box-shadow: none;
+
+    }
+    .gray-border {
+        border: 1px solid var(--bs-primary);
+        border-radius: 7px;
+        padding: 4px;
+
+        .calendar-width {
+            width: 100%;
+        }
+    }
+    .rmdp-month-picker{
+        background: var(--bs-primary);
+    }
+    .rmdp-year-picker{
+        background: var(--bs-primary);
+    }
+    .rmdp-header-values {
+        color: white;
+    }
+
+    .customColor .rmdp-week-day {
+        color: rgb(224, 223, 223);
+    }
+
+    .customColor .rmdp-arrow {
+        border: solid rgb(224, 223, 223);
+        border-width: 0 2px 2px 0;
+    }
+
+    .customColor .rmdp-arrow-container:hover {
+        background-color: transparent;
+    }
+
+    .customColor .rmdp-day.rmdp-today span {
+        background-color: var(--rmdp-today-customColor);
+    }
+
+    .customColor .rmdp-day.rmdp-selected span:not(.highlight) {
+        background-color: var(--rmdp-primary-customColor);
+    }
+
+    .customColor .rmdp-day:not(.rmdp-day-hidden) {
+        color: white;
+        font-weight: 600;
+
+        span:hover {
+            background-color: var(--rmdp-primary-customColor) !important;
+        }
+    }
+
+    .rmdp-shadow {
+        box-shadow: none;
+    }
+}
