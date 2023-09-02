@@ -1,18 +1,24 @@
 import { Calendar } from "react-multi-date-picker"
 import { useState } from "react";
 import persian from "react-date-object/calendars/persian"
-import persian_fa from "react-date-object/locales/persian_fa"
+import persian_en from "react-date-object/locales/persian_en"
 import { DateObject } from "react-multi-date-picker";
 import { Form, Row, Col, Button } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 import "./calendarOfArchive.scss"
 
-export default function CalendarOffArchive() {
+export default function CalendarOffArchive({getDataOfThisDate}) {
     const [calendarType, setCalendarType] = useState("gregorian");
     const [clickedDate, setClickedDate] = useState(new DateObject());
-    const [clickedDatePersian, setClickedDatePersian] = useState(new DateObject({ calendar: persian, locale: persian_fa }));
-
+    const [clickedDatePersian, setClickedDatePersian] = useState(new DateObject({ calendar: persian, locale: persian_en }));
+function sendDate(){
+    if(calendarType == "gregorian"){
+        getDataOfThisDate("gregorian",new DateObject(clickedDate).format());
+    }else if(calendarType == "jalali"){
+        getDataOfThisDate("jalali",new DateObject(clickedDatePersian).format());
+    }
+}
     return (
         <div className="calendar mb-4">
             <h5 className="text-customRed mb-4">Select a date:</h5>
@@ -21,7 +27,7 @@ export default function CalendarOffArchive() {
                     {calendarType == "gregorian" && <div className="input">{new DateObject(clickedDate).format()}</div>}
                     {calendarType == "jalali" && <div className="input">{new DateObject(clickedDatePersian).format()}</div>}
                 </Col>
-                <Col className="ps-0" xs={4}><Button className="fw-bold button" variant="customGreen"><FontAwesomeIcon className="me-1" icon={faMagnifyingGlass} size="sm" />Find</Button></Col>
+                <Col className="ps-0" xs={4}><Button className="fw-bold button" variant="customGreen" onClick={sendDate}><FontAwesomeIcon className="me-1" icon={faMagnifyingGlass} size="sm" />Find</Button></Col>
             </Row>
             <div className="mt-3 gray-border">
                 <Row className="mb-2 ">
@@ -49,7 +55,7 @@ export default function CalendarOffArchive() {
                     <Calendar
                         value={clickedDatePersian}
                         calendar={persian}
-                        locale={persian_fa}
+                        locale={persian_en}
                         className="calendar-width customColor bg-primary"
                         onChange={setClickedDatePersian} />
                 }
