@@ -3,10 +3,8 @@ import Date from "../Date/Date";
 import Ads from "../Ads/Ads";
 import CurrencyConverter from "../CurrencyConverter/CurrencyConverter";
 import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import TableOfCurrencies from "../Table/TableOfCurrencies";
+import { Col, Container, Row, Alert } from "react-bootstrap";
 import "./home.scss";
 
 function Home() {
@@ -48,9 +46,9 @@ function Home() {
 
 
 
-    const [colTitleForCurrencies] = useState(['Code', 'Currency', 'sell', 'buy'])
-    const [colTitleForEmamiCoins] = useState(['Emami coins', 'sell', 'buy'])
-    const [colTitleForPersianCoins] = useState(['Persian coins', 'sell', 'buy'])
+    const [colTitleForCurrencies] = useState(['Code', 'Currency', 'Sell', 'Suy'])
+    const [colTitleForEmamiCoins] = useState(['Emami coins', 'Sell', 'Buy'])
+    const [colTitleForPersianCoins] = useState(['Persian coins', 'Sell', 'Buy'])
 
     const halfCurenciesStatus = Math.ceil(currencies.length / 2);
     const firstHalfCurenciesStatus = currencies.slice(0, halfCurenciesStatus)
@@ -76,6 +74,9 @@ function Home() {
     return (
         <div>
             <Container className="mt-4">
+                {serverError && <Alert className="mt-5 mb-5 bg-customRed white  text-center">
+                    Server dosn't response.Try again.
+                </Alert>}
                 <div className="hidden-md-down text-center">
                     {topCardCurrencies.map((importantCurrency, index) =>
                         <Card key={index} targetCurrency={"T"} currency={importantCurrency} />)}

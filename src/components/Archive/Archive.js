@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Alert } from "react-bootstrap";
 import TableOfCurrencies from "../Table/TableOfCurrencies";
 import CalendarOfArchive from "../CalendarOfArchive/CalendarOfArchive"
 import { useState, useEffect } from "react";
@@ -9,6 +9,18 @@ export default function Archive() {
     const [currencies, setCurrencies] = useState([]);
     const [coins, setCoins] = useState([]);
     const [serverError, setServerError] = useState(false);
+
+    const [colTitleForCurrencies] = useState(['Code', 'Currency', 'Sell', 'Buy'])
+    const [colTitleForEmamiCoins] = useState(['Emami coins', 'Sell', 'Buy'])
+    const [colTitleForPersianCoins] = useState(['Persian coins', 'Sell', 'Buy'])
+
+    const halfCurenciesStatus = Math.ceil(currencies.length / 2);
+    const firstHalfCurenciesStatus = currencies.slice(0, halfCurenciesStatus)
+    const secondHalfCurenciesStatus = currencies.slice(halfCurenciesStatus)
+
+    const halfCoinsStatus = Math.ceil(coins.length / 2);
+    const firstHalfCoinsStatus = coins.slice(0, halfCoinsStatus)
+    const secondHalfCoinsStatus = coins.slice(halfCoinsStatus)
 
     useEffect(() => {
         async function fetchData() {
@@ -25,28 +37,33 @@ export default function Archive() {
         fetchData();
     }, [])
 
-
-
-
-
-    const [colTitleForCurrencies] = useState(['Code', 'Currency', 'sell', 'buy'])
-    const [colTitleForEmamiCoins] = useState(['Emami coins', 'sell', 'buy'])
-    const [colTitleForPersianCoins] = useState(['Persian coins', 'sell', 'buy'])
-
-    const halfCurenciesStatus = Math.ceil(currencies.length / 2);
-    const firstHalfCurenciesStatus = currencies.slice(0, halfCurenciesStatus)
-    const secondHalfCurenciesStatus = currencies.slice(halfCurenciesStatus)
-
-    const halfCoinsStatus = Math.ceil(coins.length / 2);
-    const firstHalfCoinsStatus = coins.slice(0, halfCoinsStatus)
-    const secondHalfCoinsStatus = coins.slice(halfCoinsStatus)
-
+    async function getDataOfThisDate(calendarType, date) {
+        try {
+            const res = '';
+            if (calendarType == "gregorian") {
+                console.log(date);
+                res = await fetch(`/mocks/currencies.json?date="${date}"`);
+            } else if (calendarType == "jalali") {
+                console.log(date);
+                res = await fetch(`/mocks/currencies.json?jalali_date="${date}"`);
+            }
+            const data = await res.json()
+            setCurrencies(data.currencies);
+            setCoins(data.golds.coins);
+        }
+        catch (e) {
+            setServerError(true);
+        }
+    }
     return (
         <Container className="mt-5 pb-5">
             <Row className="justify-content-center">
                 <Col xs={11} md={6} sm={7} xl={3} >
-                    <CalendarOfArchive />
+                    <CalendarOfArchive getDataOfThisDate={getDataOfThisDate} />
                 </Col>
+                {serverError && <Alert className="bg-customRed white  text-center">
+                    Server dosn't response.Try again.
+                </Alert>}
                 <Col xs={12} xl={9}>
                     <Row>
                         <Col lg={6} xs={12} className="px-1">
