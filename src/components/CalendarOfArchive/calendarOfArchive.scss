@@ -23,8 +23,7 @@
         border: 1px solid var(--bs-primary);
         border-radius: 7px;
         padding: 4px;
-
-        .calendar-width {
+        .calendar-width{
             width: 100%;
         }
     }
@@ -70,5 +69,10 @@
 
     .rmdp-shadow {
         box-shadow: none;
+    }
+    .rmdp-calendar{
+        margin: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }

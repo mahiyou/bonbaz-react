@@ -42,12 +42,12 @@ export default function Archive() {
     const secondHalfCoinsStatus = coins.slice(halfCoinsStatus)
 
     return (
-        <Container className="mt-5 mt-lg-0 mt-xl-5 mb-4">
-            <Row>
-                <Col xs={3}>
+        <Container className="mt-5 pb-5">
+            <Row className="justify-content-center">
+                <Col xs={11} md={6} sm={7} xl={3} >
                     <CalendarOfArchive />
                 </Col>
-                <Col xs={9}>
+                <Col xs={12} xl={9}>
                     <Row>
                         <Col lg={6} xs={12} className="px-1">
                             <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
