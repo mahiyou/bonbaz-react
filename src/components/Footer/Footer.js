@@ -24,7 +24,7 @@ function Footer() {
                             alt="React Bootstrap logo"
                         />
                     </a>
-                    <div className="align-middle text-white fs-6"><span className='text-customGreen'>Free</span> <span className='text-customRed'>API</span> for iranian Rial rates</div>
+                    <div className="align-middle text-white fs-6"><span className='text-customGreen'>Free</span> <span className='text-customRed'>API</span> for Iranian Rial rates</div>
                 </Col>
                 <Col className="text-center text-xs-left my-auto hidden-lg-up py-3 py-md-auto" xs={6} md={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
