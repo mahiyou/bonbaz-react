@@ -1,0 +1,55 @@
+.contact-us{
+
+    line-height: 25px;
+    .background-left{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        background-color: #262E42;
+        background-image: url(../../../public/imgs/leftMap.svg);
+        z-index: -1;
+        top: 20px;
+    }
+    .background-right{
+        height: 100%;
+        width: 50%;
+        background-color: #262E42;
+        position: absolute;
+        right: 0;
+        background-image: url(../../../public/imgs/rightMap.svg);
+        z-index: -1;
+        top: 20px;
+    }
+    .sentences{
+        font-size: 12.5px;
+    }
+    .border-for-form{
+        width: 70%;
+        background-color: #181A25;
+        border-radius: 9px;
+        padding: 20px;
+        margin: 30px 5px;
+        font-size: 12px;
+        .form-control{
+            border: solid 1px #282938;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+    .align-end{
+        display: flex;
+        align-items: end;
+    }
+    @media(max-width:768px){
+        .border-for-form{
+            width: 90%;
+            margin: 30px auto;
+        }
+        .align-end{
+            display: block;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
