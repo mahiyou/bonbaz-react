@@ -1,12 +1,14 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Alert } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import './contactus.scss'
 
 export default function ContactUs() {
+    const [serverError, setServerError] = useState(false);
     return (
         <div className="contact-us">
             <div className="background-left">
@@ -31,10 +33,25 @@ export default function ContactUs() {
                             <Formik
                                 initialValues={{ name: '', email: '', message: '' }}
                                 onSubmit={(values, { setSubmitting }) => {
-                                    setTimeout(() => {
-                                        alert(JSON.stringify(values, null, 2));
-                                        setSubmitting(false);
-                                    }, 1000);
+                                    fetch('https://www.jeyserver.com/', {
+                                        method: 'POST',
+                                        body: JSON.stringify({
+                                            messsage: values,
+                                        }),
+                                        headers: {
+                                            'Content-type': 'application/json; charset=UTF-8',
+                                        },
+                                    })
+                                        .then((response) => response.json())
+                                        .then((data) => {
+                                            console.log(data);
+                                        })
+                                        .catch(() => {
+                                            setServerError(true);
+                                        })
+                                        .finally(() => {
+                                            setSubmitting(false)
+                                        });
                                 }}
                                 validationSchema={Yup.object({
                                     name: Yup.string()
@@ -79,6 +96,9 @@ export default function ContactUs() {
                                 )
                                 }
                             </Formik >
+                            {serverError && <Alert className="bg-customRed white  text-center">
+                                Server dosn't response.Try again.
+                            </Alert>}
                         </div>
                     </Col>
                 </Row>
