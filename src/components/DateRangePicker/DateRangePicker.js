@@ -5,7 +5,7 @@ import DatePicker, { DateObject } from "react-multi-date-picker";
 
 import { useState, useEffect } from "react";
 import './DateRangePicker.scss';
-export default function DateRangePicker() {
+export default function DateRangePicker({getDataFromServer}) {
     const [currencies, setCurrencies] = useState([]);
     const [serverError, setServerError] = useState(false);
     const [selected, setSelected] = useState({ key: 1, eventKey: 1 });
@@ -57,7 +57,7 @@ export default function DateRangePicker() {
                         title={getTilte(selected.key)}>
                         {currencies.map((item, index) =>
                         (
-                            <Dropdown.Item key={index} eventKey={index}>
+                            <Dropdown.Item key={index} eventKey={index} >
                                 <span className={`me-2 rounded-1 fi fi-${item.code.slice(0, 2)}`}></span>
                                 {(item.code).toUpperCase()} - {item.name}
                             </Dropdown.Item>
@@ -71,7 +71,7 @@ export default function DateRangePicker() {
                     <div className="text-secondary">From</div>
                 </Col>
                 <Col xs={10}>
-                    <DatePicker className="bg-primary customColor" arrow={false} value={date} inputClass="custom-input" format="YYYY . MM . DD" />
+                    <DatePicker className="bg-primary customColor" arrow={false} value={date} inputClass="custom-input" format="YYYY . MM . DD" onChange={setDate}/>
                 </Col>
             </Row>
             <Row className="my-3 align-items-center">
@@ -79,12 +79,12 @@ export default function DateRangePicker() {
                     <div className="text-secondary">To</div>
                 </Col>
                 <Col xs={10}>
-                    <DatePicker className="bg-primary customColor" arrow={false} value={targetDate} inputClass="custom-input" format="YYYY . MM . DD" />
+                    <DatePicker className="bg-primary customColor" arrow={false} value={targetDate} inputClass="custom-input" format="YYYY . MM . DD" onChange={setTargetDate}/>
                 </Col>
             </Row>
             <Row>
                 <Col xs={2}></Col>
-                <Col xs={10}><Button className="my-3 fw-bold button" variant="customGreen"><FontAwesomeIcon className="me-1" icon={faMagnifyingGlass} size="sm" />Find</Button></Col>
+                <Col xs={10}><Button className="my-3 fw-bold button" variant="customGreen" onClick={()=>{getDataFromServer(currencies[selected.key],date,targetDate)}}><FontAwesomeIcon className="me-1" icon={faMagnifyingGlass} size="sm" />Find</Button></Col>
             </Row>
         </div>
     )
