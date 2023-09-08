@@ -33,6 +33,10 @@
     .dropdown-menu.show {
         width: 100%;
     }
+
+    .dropdown-menu{
+        background-color: #333A4B;
+    }
 }
 
 .rmdp-year-picker , .rmdp-month-picker{
@@ -92,11 +96,27 @@
 }
 .rmdp-shadow {
     box-shadow: none;
+    border-radius: 7px;
+    background-color: #333A4B;
+
 }
 .rmdp-container{
     width: 100%;
+    
+}
+.rmdp-day, .rmdp-week-day {
+    height: 50px;
+    width: 50px;
+    font-size: 15px;
+}
+.rmdp-day .sd{
+    font-size: 16px;
 }
 .button{
     color: white;
     width: 100%;
+//     --bs-btn-active-color: white;
+//    &:focus{
+//         color: white;
+//     }
 }
