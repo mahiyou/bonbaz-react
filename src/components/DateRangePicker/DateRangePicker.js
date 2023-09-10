@@ -21,28 +21,12 @@ function CurrencyOption({currency}) {
  * @param {{onChange: (currency: {code:string,name: string}, calendar: string, fromDate: DateObject, toDate: DateObject) => any}} props 
  */
 export default function DateRangePicker(props) {
-    const { onChange } = props;
-    const [currencies, setCurrencies] = useState([]);
+    const { onChange,currencies } = props;
     const [serverError, setServerError] = useState(false);
     const [selected, setSelected] = useState({ key: 0, eventKey: 0 });
     const [selectedCalendar, setSelectedCalendar] = useState('Gregorian');
     const [date, setDate] = useState(new DateObject())
     const [targetDate, setTargetDate] = useState(new DateObject())
-
-    
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const res = await fetch('/mocks/currencies.json');
-                const data = await res.json()
-                setCurrencies(data.currencies);
-            }
-            catch (e) {
-                setServerError(true);
-            }
-        }
-        fetchData();
-    }, []);
 
     let calendar;
     let locale;

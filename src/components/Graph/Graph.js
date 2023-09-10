@@ -27,11 +27,9 @@ function CustomizedTick(props) {
                     {date.format('DD')}
                 </tspan>
                 {(dateFormat[0] && !dateFormat[1]) && <tspan textAnchor="middle" x="0" dy="16">
-                    {/* {console.log(dateFormat)} */}
                     {date.format('MMM')}
                 </tspan>}
                 {dateFormat[1] && <tspan textAnchor="middle" x="0" dy="16">
-                    {/* {console.log(dateFormat)} */}
                     {date.format('MMM.YY')}
                 </tspan>}
             </text>
@@ -80,6 +78,9 @@ async function APICall(url, parameters) {
 async function fetchChartData(fromDate, toDate) {
     return APICall("/mocks/currencyGraph.json", { fromDate, toDate });
 }
+async function fetchCurrencyPickerData() {
+    return APICall("/mocks/currencies.json");
+}
 
 /**
  * @param {Array<{price_sell:string,price_buy:string}>} prices
@@ -111,6 +112,7 @@ function getMin(prices, type) {
 export default function Graph() {
     const [serverError, setServerError] = useState(false);
     const [currencyPrices, setCurrencyPrices] = useState([]);
+    const [currencies, setCurrencies] = useState([]);
     const [calendarType, setCalendarType] = useState('Gregorian');
     const [dateFormat, setDateFormat] = useState([false, false]);
     const [chartTitle, setChartTitle] = useState({ code: 'aed', name: 'UAE Dirham' });
@@ -134,12 +136,19 @@ export default function Graph() {
             setServerError(true);
         }
     }
+    async function getCurrencies(){
+        try{
+            const result = await fetchCurrencyPickerData();
+            setCurrencies(result.currencies);
+
+        } catch {
+            setServerError(true);
+        }
+    }
     function dataProcessing(currencyPrices) {
         for (let i = 0; i < currencyPrices.length; i++) {
             if (new DateObject({ date: currencyPrices[i].updated_at}).month.number != new DateObject({ date: currencyPrices[i + 1].updated_at}).month.number) {
                 setDateFormat([true,false])
-                console.log(new DateObject({ date: currencyPrices[i].updated_at}).month.number)
-                console.log(new DateObject({ date: currencyPrices[i+1].updated_at}).month.number)
             }
             if (new DateObject({ date: currencyPrices[i].updated_at}).year != new DateObject({ date: currencyPrices[i + 1].updated_at}).year) {
                 setDateFormat([true,true])
@@ -150,6 +159,7 @@ export default function Graph() {
     useEffect(() => {
         const now = new DateObject();
         getDataFromServer(chartTitle, calendarType, now, now);
+        getCurrencies();
     }, []);
 
     const minSell = getMin(currencyPrices, "sell");
@@ -162,7 +172,7 @@ export default function Graph() {
         <Container className='graph'>
             <Row>
                 <Col lg={5} md={8} xs={12}>
-                    <DateRangePicker onChange={getDataFromServer} />
+                    <DateRangePicker onChange={getDataFromServer} currencies={currencies}/>
                 </Col>
             </Row>
             <Row className='mt-5 mb-5'>
