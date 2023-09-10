@@ -1,7 +1,7 @@
 .graph {
     font-size: 13px;
-    .graph-background{
-        background-color:#262E42;
+    .graph-background{    
+        height: 500px;
     }
     .table {
         thead tr th {
@@ -41,5 +41,11 @@
         background-color: #7879F1;
         width: 100%;
         padding: 5px;
+    }
+    @media(max-width:576px) {
+        font-size: 11px;
+        .graph-background{
+            height: 300px;
+        }
     }
 }

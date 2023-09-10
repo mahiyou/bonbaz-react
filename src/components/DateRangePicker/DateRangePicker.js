@@ -64,7 +64,7 @@ export default function DateRangePicker(props) {
                         className="currnecies-dropden"
                         variant="success"
                         onSelect={(key, e) => setSelected({ key, value: e.target.value })}
-                        title={currencies.length ? <CurrencyOption currency={currencies[selected.key]} /> : null}>
+                        title={currencies.length ? <CurrencyOption currency={currencies[selected.key]} /> : ''}>
                         {currencies.map((item, index) =>
                         (
                             <Dropdown.Item key={index} eventKey={index} >

@@ -11,7 +11,7 @@ import persian_en from "react-date-object/locales/persian_en"
 import './graph.scss';
 
 function CustomizedTick(props) {
-    const { x, y, stroke, payload, calendarType } = props;
+    const { x, y, stroke, payload, calendarType, dateFormat } = props;
     const date = new DateObject({
         calendar: gregorian,
         format: 'YYYY-MM-DD hh:mm:ss',
@@ -22,13 +22,18 @@ function CustomizedTick(props) {
     }
     return (
         <g transform={`translate(${x},${y})`}>
-            <text x={0} y={5} dy={16} fill="white">
+            <text x={0} y={5} dy={12} fill="white">
                 <tspan textAnchor="middle" x="0">
-                    {date.format('YYYY-MM-DD')}
+                    {date.format('DD')}
                 </tspan>
-                <tspan textAnchor="middle" x="0" dy="20">
-                    {date.format('hh:mm')}
-                </tspan>
+                {(dateFormat[0] && !dateFormat[1]) && <tspan textAnchor="middle" x="0" dy="16">
+                    {/* {console.log(dateFormat)} */}
+                    {date.format('MMM')}
+                </tspan>}
+                {dateFormat[1] && <tspan textAnchor="middle" x="0" dy="16">
+                    {/* {console.log(dateFormat)} */}
+                    {date.format('MMM.YY')}
+                </tspan>}
             </text>
         </g>
     );
@@ -73,7 +78,7 @@ async function APICall(url, parameters) {
  * @returns {Promise<any>}
  */
 async function fetchChartData(fromDate, toDate) {
-    return APICall("/mocks/currencyGraph.json", { fromDate,  toDate });
+    return APICall("/mocks/currencyGraph.json", { fromDate, toDate });
 }
 
 /**
@@ -84,7 +89,7 @@ async function fetchChartData(fromDate, toDate) {
 function getAverage(prices, type) {
     return prices
         .map((p) => parseInt(type == 'sell' ? p.price_sell : p.price_buy))
-        .reduce((p, c) => p + c, 0) / prices.length;
+        .reduce((p, c) => p + c, 0) / prices.length || 0;
 }
 /**
  * @param {Array<{price_sell:string,price_buy:string}>} prices
@@ -107,10 +112,11 @@ export default function Graph() {
     const [serverError, setServerError] = useState(false);
     const [currencyPrices, setCurrencyPrices] = useState([]);
     const [calendarType, setCalendarType] = useState('Gregorian');
-    const [chartTitle, setChartTitle] = useState({code:'aed', name: 'UAE Dirham'});
+    const [dateFormat, setDateFormat] = useState([false, false]);
+    const [chartTitle, setChartTitle] = useState({ code: 'aed', name: 'UAE Dirham' });
     const formatter = (value) => value.toLocaleString();
 
-    
+
     /**
      * @param {{code:string,name:string}} currency 
      * @param {string} calendar 
@@ -123,8 +129,21 @@ export default function Graph() {
         try {
             const result = await fetchChartData(fromDate, toDate);
             setCurrencyPrices(result);
+            dataProcessing(result)
         } catch {
             setServerError(true);
+        }
+    }
+    function dataProcessing(currencyPrices) {
+        for (let i = 0; i < currencyPrices.length; i++) {
+            if (new DateObject({ date: currencyPrices[i].updated_at}).month.number != new DateObject({ date: currencyPrices[i + 1].updated_at}).month.number) {
+                setDateFormat([true,false])
+                console.log(new DateObject({ date: currencyPrices[i].updated_at}).month.number)
+                console.log(new DateObject({ date: currencyPrices[i+1].updated_at}).month.number)
+            }
+            if (new DateObject({ date: currencyPrices[i].updated_at}).year != new DateObject({ date: currencyPrices[i + 1].updated_at}).year) {
+                setDateFormat([true,true])
+            }
         }
     }
 
@@ -153,26 +172,30 @@ export default function Graph() {
                             <span className={`me-2 rounded-1 fi fi-${chartTitle.code.slice(0, 2)}`}></span>
                             <span>({chartTitle.code.toUpperCase()}/IRR) {chartTitle.name} to Rial Chart</span>
                         </div>
-                        <div className='bg-primary pt-5 pb-5'>
-                            {(currencyPrices.length && <LineChart
-                                width={700}
-                                height={400}
-                                data={currencyPrices}
-                                margin={{
-                                    top: 5,
-                                    right: 30,
-                                    left: 20,
-                                    bottom: 5,
-                                }}
-                            >
-                                <CartesianGrid opacity={0.2} />
-                                <XAxis interval={8} dataKey="updated_at" tick={<CustomizedTick calendarType={calendarType} />} />
-                                <YAxis tickFormatter={formatter} tickCount={7} tick={{ fill: "white" }} domain={[min, max]} />
-                                <Tooltip content={<CustomTooltip calendarType={calendarType}/>} />
-                                <Legend wrapperStyle={{ bottom: -28 }} />
-                                <Line type="monotone" name='Sell' dataKey="price_sell" stroke="#21DBA6" strokeWidth={2} dot={false} />
-                                <Line type="monotone" name='Buy' dataKey="price_buy" stroke="#F55D6F" strokeWidth={2} dot={false} />
-                            </LineChart>)}
+                        <div className='bg-primary graph-background pt-5 pb-5 mb-5'>
+                            {(currencyPrices.length &&
+                                <ResponsiveContainer>
+                                    <LineChart
+                                        width={700}
+                                        height={400}
+                                        data={currencyPrices}
+                                        margin={{
+                                            top: 5,
+                                            right: 30,
+                                            left: 20,
+                                            bottom: 5,
+                                        }}>
+                                        <CartesianGrid opacity={0.2} />
+                                        <XAxis interval={8} dataKey="updated_at" tick={<CustomizedTick calendarType={calendarType} dateFormat={dateFormat} />} />
+                                        <YAxis tickFormatter={formatter} tickCount={7} tick={{ fill: "white" }} domain={[min, max]} />
+                                        <Tooltip content={<CustomTooltip calendarType={calendarType} />} />
+                                        <Legend wrapperStyle={{ bottom: -28 }} />
+                                        <Line type="monotone" name='Sell' dataKey="price_sell" stroke="#21DBA6" strokeWidth={2} dot={false} />
+                                        <Line type="monotone" name='Buy' dataKey="price_buy" stroke="#F55D6F" strokeWidth={2} dot={false} />
+                                    </LineChart>
+                                </ResponsiveContainer>
+
+                            )}
                         </div>
                     </div>
 
