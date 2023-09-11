@@ -4,11 +4,14 @@ import './custom.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-<script src="https://kit.fontawesome.com/dca13773b0.js" crossorigin="anonymous"></script>
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const elem = document.getElementById('root');
+if (elem === null) {
+  throw Error("#root element is not present");
+}
+const root = ReactDOM.createRoot(elem);
 root.render(
   <React.StrictMode>
+    <script src="https://kit.fontawesome.com/dca13773b0.js" crossOrigin="anonymous"></script>
     <App />
   </React.StrictMode>
 );
