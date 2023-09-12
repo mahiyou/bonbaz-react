@@ -37,7 +37,7 @@ export default function DateRangePicker(props) {
     }
 
     return (
-        <div>
+        <div className="date-range-picker">
             <h5 className="text-customRed mt-5 mb-5">Select a date:</h5>
             <Row className="my-3 align-items-center">
                 <Col xs={2}>

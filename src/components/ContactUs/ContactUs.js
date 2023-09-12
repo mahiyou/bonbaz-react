@@ -11,9 +11,7 @@ export default function ContactUs() {
     const [serverError, setServerError] = useState(false);
     return (
         <div className="contact-us">
-            <div className="background-left">
-            </div>
-            <div className="background-right">
+            <div className="background">
             </div>
             <Container>
                 <Row>
@@ -23,7 +21,7 @@ export default function ContactUs() {
                             <div className="sentences">Lorem ipsum is a placeholder text commonly used to demonstrate:</div>
                             <div>
                                 <FontAwesomeIcon className="me-2 text-customRed" icon={faEnvelope} />
-                                <Link className="text-white" href="#">info.bonbaz.com</Link>
+                                <Link className="text-white" href="#">info@bonbaz.com</Link>
                             </div>
                         </div>
                     </Col>

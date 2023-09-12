@@ -1,24 +1,13 @@
 .contact-us{
-
     line-height: 25px;
-    .background-left{
+    .background{
         position: absolute;
         height: 100%;
-        width: 50%;
-        background-color: #262E42;
-        background-image: url(../../../public/imgs/leftMap.svg);
+        width: 100%;
+        background-image: url(../../../public/imgs/pattern-cantactus.svg);
         z-index: -1;
-        top: 20px;
-    }
-    .background-right{
-        height: 100%;
-        width: 50%;
-        background-color: #262E42;
-        position: absolute;
-        right: 0;
-        background-image: url(../../../public/imgs/rightMap.svg);
-        z-index: -1;
-        top: 20px;
+        top: 75px;
+        background-repeat: repeat-x;
     }
     .sentences{
         font-size: 12.5px;

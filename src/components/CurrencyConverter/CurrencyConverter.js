@@ -11,30 +11,24 @@ export default function CurrencyConverter({ curenciesStatus }) {
     const [currencyAmount, setCurrencyAmount] = useState(0);
     const [targetCurrencyAmount, setTargetCurrencyAmount] = useState(0);
 
-    const [selected, setSelected] = useState({ key: 1, eventKey: 1 });
-    const handleSelect = (key, event) => {
-        setSelected({ key, value: event.target.value });
-    };
-    const [selectedTargetCurrency, setSelectedTargetCurrency] = useState({ key: 0, eventKey: 0 });
-    const handleSelectTargetCurrency = (key, event) => {
-        setSelectedTargetCurrency({ key, value: event.target.value });
-    };
+    const [selected, setSelected] = useState('usd');
+    const [selectedTargetCurrency, setSelectedTargetCurrency] = useState('irr');
     function convert(value) {
-        setCurrencyAmount(value)
-        setTargetCurrencyAmount(value * curenciesStatus[selected.key].price_sell / curenciesStatus[selectedTargetCurrency.key].price_sell)
+        setCurrencyAmount(value);
+        setTargetCurrencyAmount(value * (curenciesStatus.find(({ code }) => code === selected)).price_sell / (curenciesStatus.find(({ code }) => code === selectedTargetCurrency)).price_sell)
     }
-    function convertReverze(value) {
+    function convertReverse(value) {
         setTargetCurrencyAmount(value)
-        setCurrencyAmount(value * curenciesStatus[selectedTargetCurrency.key].price_sell / curenciesStatus[selected.key].price_sell)
+        setCurrencyAmount(value * (curenciesStatus.find(({ code }) => code === selectedTargetCurrency)).price_sell / (curenciesStatus.find(({ code }) => code === selected)).price_sell)
     }
-    function getTilte(key) {
+    function getTilte(code) {
         return (
             <span>
                 {
-                    curenciesStatus[key] &&
+                    curenciesStatus.find(({ code }) => code === code) &&
                     <span>
-                        <span className={`me-2 rounded-1 fi fi-${curenciesStatus[key].code.slice(0, 2)}`}></span>
-                        <span>{(curenciesStatus[key].code).toUpperCase()} - {curenciesStatus[key].name}</span>
+                        <span className={`me-2 rounded-1 fi fi-${code.slice(0, 2)}`}></span>
+                        <span>{code.toUpperCase()} - {curenciesStatus.find(({ code }) => code === code).name}</span> 
                     </span>
                 }
             </span>
@@ -47,11 +41,11 @@ export default function CurrencyConverter({ curenciesStatus }) {
             <DropdownButton
                 className="converter-dropden"
                 variant="success"
-                onSelect={handleSelect}
-                title={getTilte(selected.key)}>
+                onSelect={(e) => {setSelected(e)}}
+                title={getTilte(selected)}>
                 {curenciesStatus.map((item, index) =>
                 (
-                    <Dropdown.Item key={index} eventKey={index}>
+                    <Dropdown.Item key={index} eventKey={item.code}>
                         <span className={`me-2 rounded-1 fi fi-${item.code.slice(0, 2)}`}></span>
                         {(item.code).toUpperCase()} - {item.name}
                     </Dropdown.Item>
@@ -64,18 +58,18 @@ export default function CurrencyConverter({ curenciesStatus }) {
             <DropdownButton
                 className="converter-dropden"
                 variant="success"
-                onSelect={handleSelectTargetCurrency}
-                title={getTilte(selectedTargetCurrency.key)}>
+                onSelect={(e) => {setSelectedTargetCurrency(e)}}
+                title={getTilte(selectedTargetCurrency)}>
                 {curenciesStatus.map((item, index) =>
                 (
-                    <Dropdown.Item key={index} eventKey={index}>
+                    <Dropdown.Item key={index} eventKey={item.code}>
                         <span className={`me-2 rounded-1 fi fi-${item.code.slice(0, 2)}`}></span>
                         {(item.code.toUpperCase())} - {item.name}
                     </Dropdown.Item>
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="number" min={0} value={targetCurrencyAmount} onChange={(e) => { convertReverze(e.target.value) }} />
+            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="number" min={0} value={targetCurrencyAmount} onChange={(e) => { convertReverse(e.target.value) }} />
         </div>
 
     );
