@@ -1,6 +1,6 @@
 {
-  "date":	"2023-7-29 9:6:30",
-  "jalali_date":	"1402/6/7 12:36:30",
+  "date": "2023-7-29 9:6:30",
+  "jalali_date": "1402/6/7 12:36:30",
   "currencies": [
     {
       "name": "UAE Dirham",
@@ -8,7 +8,34 @@
       "count": 1,
       "price_buy": "13490",
       "price_sell": "13540",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Afghan Afg",
@@ -16,7 +43,34 @@
       "count": 1,
       "price_buy": "585",
       "price_sell": "590",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Armenian",
@@ -24,7 +78,34 @@
       "count": 10,
       "price_buy": "1270",
       "price_sell": "1275",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Australian",
@@ -32,7 +113,34 @@
       "count": 1,
       "price_buy": "31450",
       "price_sell": "31550",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Azerbaijan",
@@ -40,7 +148,34 @@
       "count": 1,
       "price_buy": "28800",
       "price_sell": "28900",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Bahraini D",
@@ -48,7 +183,34 @@
       "count": 1,
       "price_buy": "130050",
       "price_sell": "130550",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Canadian D",
@@ -56,7 +218,34 @@
       "count": 1,
       "price_buy": "36100",
       "price_sell": "36200",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Swiss Fran",
@@ -64,7 +253,34 @@
       "count": 1,
       "price_buy": "55600",
       "price_sell": "55700",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Chinese Yu",
@@ -72,7 +288,34 @@
       "count": 1,
       "price_buy": "6735",
       "price_sell": "6755",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Danish Kro",
@@ -80,7 +323,34 @@
       "count": 1,
       "price_buy": "7115",
       "price_sell": "7135",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Euro",
@@ -88,7 +358,259 @@
       "count": 1,
       "price_buy": "53050",
       "price_sell": "53150",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     },
     {
       "name": "British Po",
@@ -96,7 +618,34 @@
       "count": 1,
       "price_buy": "61750",
       "price_sell": "61950",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Hong Kong ",
@@ -104,7 +653,34 @@
       "count": 1,
       "price_buy": "6250",
       "price_sell": "6280",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Indian Rup",
@@ -112,7 +688,34 @@
       "count": 1,
       "price_buy": "590",
       "price_sell": "595",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Iraqi D",
@@ -120,7 +723,34 @@
       "count": 100,
       "price_buy": "3750",
       "price_sell": "3760",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Japanese",
@@ -128,7 +758,34 @@
       "count": 10,
       "price_buy": "3355",
       "price_sell": "3365",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Kuwaiti Di",
@@ -136,7 +793,34 @@
       "count": 1,
       "price_buy": "159200",
       "price_sell": "159600",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Ringgit",
@@ -144,7 +828,34 @@
       "count": 1,
       "price_buy": "10500",
       "price_sell": "10600",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Norwegian ",
@@ -152,7 +863,34 @@
       "count": 1,
       "price_buy": "4590",
       "price_sell": "4605",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Omani Rial",
@@ -160,7 +898,34 @@
       "count": 1,
       "price_buy": "127600",
       "price_sell": "127900",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Qatari Riy",
@@ -168,7 +933,34 @@
       "count": 1,
       "price_buy": "13450",
       "price_sell": "13550",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Russian Ru",
@@ -176,7 +968,34 @@
       "count": 1,
       "price_buy": "515",
       "price_sell": "520",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "KSA Riyal",
@@ -184,7 +1003,34 @@
       "count": 1,
       "price_buy": "13050",
       "price_sell": "13150",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Swedish Kr",
@@ -192,7 +1038,34 @@
       "count": 1,
       "price_buy": "4440",
       "price_sell": "4455",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Singapore ",
@@ -200,7 +1073,34 @@
       "count": 1,
       "price_buy": "36200",
       "price_sell": "36300",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Thai Baht",
@@ -208,7 +1108,34 @@
       "count": 1,
       "price_buy": "1395",
       "price_sell": "1400",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "Turkish Li",
@@ -216,7 +1143,34 @@
       "count": 1,
       "price_buy": "1835",
       "price_sell": "1855",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        }
+      ]
     },
     {
       "name": "US Dollar",
@@ -224,73 +1178,1582 @@
       "count": 1,
       "price_buy": "49150",
       "price_sell": "49250",
-      "updated_at": "2023-06-27T12:00:30.000000Z"
+      "updated_at": "2023-06-27T12:00:30.000000Z",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     }
   ],
   "golds": {
-    "gram": "2313125",
-    "mithqal": "10020000",
-    "ounce": "1914.89",
+    "gram": {
+      "price": "2313125",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
+    },
+    "mithqal": {
+      "price": "10020000",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
+    },
+    "ounce": {
+      "price": "1914.89",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
+    },
     "coins": [
       {
         "name": "emami",
         "price_buy": "27500000",
         "price_sell": "27900000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:36:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:36:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:37:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:37:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:38:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:38:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:39:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:39:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:40:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:40:00"
+          },
+          {
+            "price_buy": "49500",
+            "price_sell": "49600",
+            "updated_at": "2023-06-09 14:41:30"
+          },
+          {
+            "price_buy": "49500",
+            "price_sell": "49600",
+            "updated_at": "2023-06-09 14:41:00"
+          },
+          {
+            "price_buy": "49500",
+            "price_sell": "49600",
+            "updated_at": "2023-06-09 14:42:00"
+          },
+          {
+            "price_buy": "49500",
+            "price_sell": "49600",
+            "updated_at": "2023-06-09 14:43:30"
+          },
+          {
+            "price_buy": "49500",
+            "price_sell": "49600",
+            "updated_at": "2023-06-09 14:43:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 15:51:30"
+          },
+          {
+            "price_buy": "49600",
+            "price_sell": "49700",
+            "updated_at": "2023-06-09 16:57:30"
+          },
+          {
+            "price_buy": "49650",
+            "price_sell": "49750",
+            "updated_at": "2023-06-10 08:13:00"
+          },
+          {
+            "price_buy": "49600",
+            "price_sell": "49700",
+            "updated_at": "2023-06-10 08:39:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-10 08:41:00"
+          },
+          {
+            "price_buy": "49600",
+            "price_sell": "49700",
+            "updated_at": "2023-06-10 09:49:00"
+          },
+          {
+            "price_buy": "49650",
+            "price_sell": "49750",
+            "updated_at": "2023-06-10 09:50:30"
+          },
+          {
+            "price_buy": "49700",
+            "price_sell": "49800",
+            "updated_at": "2023-06-10 09:59:00"
+          },
+          {
+            "price_buy": "49750",
+            "price_sell": "49850",
+            "updated_at": "2023-06-10 13:14:00"
+          },
+          {
+            "price_buy": "49700",
+            "price_sell": "49800",
+            "updated_at": "2023-06-10 13:37:00"
+          },
+          {
+            "price_buy": "49650",
+            "price_sell": "49750",
+            "updated_at": "2023-06-10 16:10:00"
+          },
+          {
+            "price_buy": "49600",
+            "price_sell": "49700",
+            "updated_at": "2023-06-10 16:14:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-10 16:16:00"
+          },
+          {
+            "price_buy": "49500",
+            "price_sell": "49600",
+            "updated_at": "2023-06-10 16:19:00"
+          },
+          {
+            "price_buy": "49450",
+            "price_sell": "49550",
+            "updated_at": "2023-06-10 16:20:00"
+          },
+          {
+            "price_buy": "49400",
+            "price_sell": "49500",
+            "updated_at": "2023-06-10 16:36:00"
+          },
+          {
+            "price_buy": "49350",
+            "price_sell": "49450",
+            "updated_at": "2023-06-10 16:50:00"
+          },
+          {
+            "price_buy": "49300",
+            "price_sell": "49400",
+            "updated_at": "2023-06-10 16:52:00"
+          },
+          {
+            "price_buy": "49250",
+            "price_sell": "49350",
+            "updated_at": "2023-06-10 16:54:00"
+          },
+          {
+            "price_buy": "49200",
+            "price_sell": "49300",
+            "updated_at": "2023-06-10 17:00:00"
+          },
+          {
+            "price_buy": "49150",
+            "price_sell": "49250",
+            "updated_at": "2023-06-10 17:07:00"
+          },
+          {
+            "price_buy": "49200",
+            "price_sell": "49300",
+            "updated_at": "2023-06-10 17:20:30"
+          },
+          {
+            "price_buy": "49150",
+            "price_sell": "49250",
+            "updated_at": "2023-06-10 17:25:30"
+          },
+          {
+            "price_buy": "49100",
+            "price_sell": "49200",
+            "updated_at": "2023-06-10 17:26:30"
+          },
+          {
+            "price_buy": "48850",
+            "price_sell": "48950",
+            "updated_at": "2023-06-11 11:01:00"
+          },
+          {
+            "price_buy": "48800",
+            "price_sell": "48900",
+            "updated_at": "2023-06-11 11:02:00"
+          },
+          {
+            "price_buy": "48750",
+            "price_sell": "48850",
+            "updated_at": "2023-06-11 11:07:00"
+          },
+          {
+            "price_buy": "48700",
+            "price_sell": "48800",
+            "updated_at": "2023-06-11 11:14:00"
+          },
+          {
+            "price_buy": "48650",
+            "price_sell": "48750",
+            "updated_at": "2023-07-11 11:33:00"
+          }
+        ]
       },
       {
         "name": "azadi",
         "price_buy": "24500000",
         "price_sell": "25000000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "nim",
         "price_buy": "14650000",
         "price_sell": "14950000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "robe",
         "price_buy": "9750000",
         "price_sell": "9950000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "grami",
         "price_buy": "5600000",
         "price_sell": "5850000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "parsian_100",
         "price_buy": "5600000",
         "price_sell": "5850000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "parsian_200",
         "price_buy": "485000",
         "price_sell": "541000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "parsian_300",
         "price_buy": "706000",
         "price_sell": "776000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "parsian_400",
         "price_buy": "985000",
         "price_sell": "1012000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       },
       {
         "name": "parsian_500",
         "price_buy": "1100000",
         "price_sell": "1248000",
-        "updated_at": "2023-06-27T12:00:30.000000Z"
+        "updated_at": "2023-06-27T12:00:30.000000Z",
+        "history": [
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:33:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:30"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:34:00"
+          },
+          {
+            "price_buy": "49550",
+            "price_sell": "49650",
+            "updated_at": "2023-06-09 14:35:30"
+          }
+        ]
       }
     ]
   },
@@ -298,33 +2761,1544 @@
     {
       "name": "Bitcoin",
       "code": "BTC",
-      "price": "26059.3"
+      "price": "26059.3",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     },
     {
       "name": "Ethereum",
       "code": "ETH",
-      "price": "1833.03"
+      "price": "1833.03",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     },
     {
       "name": "Tron",
       "code": "TRX",
-      "price": "0.07744"
+      "price": "0.07744",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     },
     {
       "name": "Cardano",
       "code": "ADA",
-      "price": "0.29094"
+      "price": "0.29094",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     },
     {
       "name": "Polkadot",
       "code": "DOT",
-      "price": "4.9951"
+      "price": "4.9951",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     },
     {
       "name": "Dogecoin",
       "code": "DOGE",
-      "price": "0.7463"
+      "price": "0.7463",
+      "history": [
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:33:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:34:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:35:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:36:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:37:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:38:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:30"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 14:40:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:41:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:42:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:30"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-09 14:43:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-09 15:51:30"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-09 16:57:30"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 08:13:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 08:39:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 08:41:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 09:49:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 09:50:30"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 09:59:00"
+        },
+        {
+          "price_buy": "49750",
+          "price_sell": "49850",
+          "updated_at": "2023-06-10 13:14:00"
+        },
+        {
+          "price_buy": "49700",
+          "price_sell": "49800",
+          "updated_at": "2023-06-10 13:37:00"
+        },
+        {
+          "price_buy": "49650",
+          "price_sell": "49750",
+          "updated_at": "2023-06-10 16:10:00"
+        },
+        {
+          "price_buy": "49600",
+          "price_sell": "49700",
+          "updated_at": "2023-06-10 16:14:00"
+        },
+        {
+          "price_buy": "49550",
+          "price_sell": "49650",
+          "updated_at": "2023-06-10 16:16:00"
+        },
+        {
+          "price_buy": "49500",
+          "price_sell": "49600",
+          "updated_at": "2023-06-10 16:19:00"
+        },
+        {
+          "price_buy": "49450",
+          "price_sell": "49550",
+          "updated_at": "2023-06-10 16:20:00"
+        },
+        {
+          "price_buy": "49400",
+          "price_sell": "49500",
+          "updated_at": "2023-06-10 16:36:00"
+        },
+        {
+          "price_buy": "49350",
+          "price_sell": "49450",
+          "updated_at": "2023-06-10 16:50:00"
+        },
+        {
+          "price_buy": "49300",
+          "price_sell": "49400",
+          "updated_at": "2023-06-10 16:52:00"
+        },
+        {
+          "price_buy": "49250",
+          "price_sell": "49350",
+          "updated_at": "2023-06-10 16:54:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:00:00"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:07:00"
+        },
+        {
+          "price_buy": "49200",
+          "price_sell": "49300",
+          "updated_at": "2023-06-10 17:20:30"
+        },
+        {
+          "price_buy": "49150",
+          "price_sell": "49250",
+          "updated_at": "2023-06-10 17:25:30"
+        },
+        {
+          "price_buy": "49100",
+          "price_sell": "49200",
+          "updated_at": "2023-06-10 17:26:30"
+        },
+        {
+          "price_buy": "48850",
+          "price_sell": "48950",
+          "updated_at": "2023-06-11 11:01:00"
+        },
+        {
+          "price_buy": "48800",
+          "price_sell": "48900",
+          "updated_at": "2023-06-11 11:02:00"
+        },
+        {
+          "price_buy": "48750",
+          "price_sell": "48850",
+          "updated_at": "2023-06-11 11:07:00"
+        },
+        {
+          "price_buy": "48700",
+          "price_sell": "48800",
+          "updated_at": "2023-06-11 11:14:00"
+        },
+        {
+          "price_buy": "48650",
+          "price_sell": "48750",
+          "updated_at": "2023-07-11 11:33:00"
+        }
+      ]
     }
   ]
 }
-  

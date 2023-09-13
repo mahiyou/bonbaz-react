@@ -166,7 +166,7 @@ export default function Graph() {
     const minBuy = getMin(currencyPrices, "buy");
     const maxSell = getMax(currencyPrices, "sell");
     const maxBuy = getMax(currencyPrices, "buy");
-    const min = Math.min(minBuy, minBuy);
+    const min = Math.min(minSell, minBuy);
     const max = Math.max(maxSell, maxBuy);
     return (
         <Container className='graph'>

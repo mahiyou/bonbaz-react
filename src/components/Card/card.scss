@@ -1,9 +1,9 @@
 .card{
     width:176px;
-    height:110px;
+    height:130px;
     border: solid 2px #282938;
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
     padding-top: 10px;
     align-items: center;
     &:first-child{
@@ -35,7 +35,7 @@
         width: 0px;
         height: 0;
         border-top: 0px solid transparent;
-        border-right: 8px solid #21DBA6;
+        border-right: 8px solid #F55D6F;
         border-bottom: 8px solid transparent;
         margin-left: 5px;
         display: inline-block;  
@@ -44,7 +44,7 @@
         width: 0px;
         height: 0;
         border-top: 8px solid transparent;
-        border-right: 8px solid #F55D6F;
+        border-right: 8px solid #21DBA6;
         border-bottom: 0px solid transparent;
         margin-left: 5px;
         display: inline-block;

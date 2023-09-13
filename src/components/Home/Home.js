@@ -23,12 +23,12 @@ function Home() {
                 setCoins(data.golds.coins);
                 setCryptoCurrencies(data.crypto_currencies);
                 setTopCardCurrencies([
-                    { name: "Gold (Once)", price: data.golds.ounce, icon: "/imgs/currencies/gold-card.svg" },
-                    { name: "Gold (Gram)", price: data.golds.gram, icon: "/imgs/currencies/gold-card.svg" },
-                    { name: "Gold (Mithqal)", price: data.golds.mithqal, icon: "/imgs/currencies/gold-card.svg" },
-                    { name: "Gold (Emami)", price: fidePrice("emami", data.golds.coins), icon: "/imgs/currencies/gold-card.svg" },
-                    { name: "Euro / IRR", price: fidePrice("Euro", data.currencies), icon: "/imgs/currencies/euro-card.svg" },
-                    { name: "US Dollar / IRR", price: fidePrice("US Dollar", data.currencies), icon: "/imgs/currencies/usdollar-card.svg" },
+                    { name: "Gold (Once)", price: data.golds.ounce.price, icon: "/imgs/currencies/gold-card.svg", history: data.golds.ounce.history },
+                    { name: "Gold (Gram)", price: data.golds.gram.price, icon: "/imgs/currencies/gold-card.svg", history: data.golds.gram.history },
+                    { name: "Gold (Mithqal)", price: data.golds.mithqal.price, icon: "/imgs/currencies/gold-card.svg", history: data.golds.mithqal.history },
+                    { name: "Gold (Emami)", price: findPrice("emami", data.golds.coins), icon: "/imgs/currencies/gold-card.svg", history: data.golds.coins.find(({ name }) => name === 'emami').history },
+                    { name: "Euro / IRR", price: findPrice("Euro", data.currencies), icon: "/imgs/currencies/euro-card.svg", history: data.currencies.find(({ code }) => code === 'eur').history },
+                    { name: "US Dollar / IRR", price: findPrice("US Dollar", data.currencies), icon: "/imgs/currencies/usdollar-card.svg", history: data.currencies.find(({ code }) => code === 'usd').history },
                 ]);
             }
             catch (e) {
@@ -38,7 +38,7 @@ function Home() {
         fetchData();
     }, [])
 
-    function fidePrice(curName, targetArray) {
+    function findPrice(curName, targetArray) {
         let index = targetArray.findIndex(cur => cur.name == curName)
         return targetArray[index].price_buy;
     }
@@ -46,7 +46,7 @@ function Home() {
 
 
 
-    const [colTitleForCurrencies] = useState(['Code', 'Currency', 'Sell', 'Suy'])
+    const [colTitleForCurrencies] = useState(['Code', 'Currency', 'Sell', 'Buy'])
     const [colTitleForEmamiCoins] = useState(['Emami coins', 'Sell', 'Buy'])
     const [colTitleForPersianCoins] = useState(['Persian coins', 'Sell', 'Buy'])
 
@@ -66,7 +66,8 @@ function Home() {
                 price_sell: "1",
                 price_buy: "1",
                 count: 1,
-                updated_at: ""
+                updated_at: "",
+                history: ""
             }, ...currencies,]
         )
     }
@@ -104,7 +105,7 @@ function Home() {
                         <Ads />
                     </Col>
                 </Row>
-                <div className="hidden-lg-up my-4 text-center">{topCardCurrencies.map((importantCurrency, index) => <Card key={index} targetCurrency={"T"} currency={importantCurrency} />)}</div>
+                <div className="hidden-lg-up my-4 text-center">{topCardCurrencies.map((importantCurrency, index) =><Card key={index} targetCurrency={"T"} currency={importantCurrency} />)}</div>
                 <div className="hidden-md-down my-4 text-center">{cryptoCurrencies.map((cryptoCurrency, index) => <Card key={index} targetCurrency={"$"} currency={cryptoCurrency} icon={`/imgs/currencies/${cryptoCurrency.code}-card.svg`} />)}</div>
             </Container>
         </div>
