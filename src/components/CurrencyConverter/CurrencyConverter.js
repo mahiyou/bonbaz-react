@@ -13,14 +13,42 @@ export default function CurrencyConverter({ curenciesStatus }) {
 
     const [selected, setSelected] = useState('usd');
     const [selectedTargetCurrency, setSelectedTargetCurrency] = useState('irr');
+
+    function getCurrencyByCode(code) {
+        return curenciesStatus.find((currency) => currency.code === code);
+    }
+
     function convert(value) {
-        setCurrencyAmount(value);
-        setTargetCurrencyAmount(value * (curenciesStatus.find(({ code }) => code === selected)).price_sell / (curenciesStatus.find(({ code }) => code === selectedTargetCurrency)).price_sell)
+        console.log('value', value)
+        change(selected, selectedTargetCurrency, value, true);
     }
     function convertReverse(value) {
-        setTargetCurrencyAmount(value)
-        setCurrencyAmount(value * (curenciesStatus.find(({ code }) => code === selectedTargetCurrency)).price_sell / (curenciesStatus.find(({ code }) => code === selected)).price_sell)
+        change(selected, selectedTargetCurrency, value, false);
     }
+
+    function change(from, to, amount, isSource) {
+        const fromCurrency = getCurrencyByCode(from);
+        const toCurrency = getCurrencyByCode(to);
+
+        if (isSource) {
+            setCurrencyAmount(amount);
+            setTargetCurrencyAmount((amount * fromCurrency.price_sell / toCurrency.price_sell));
+        } else {
+            setTargetCurrencyAmount(amount);
+            setCurrencyAmount(amount * toCurrency.price_sell / fromCurrency.price_sell);
+        }
+    }
+
+    function onChangeSourceCurrency(value) {
+        setSelected(value);
+        change(value, selectedTargetCurrency, currencyAmount, true);
+    }
+
+    function onChangeTargetCurrency(value) {
+        setSelectedTargetCurrency(value);
+        change(selected, value, currencyAmount, true);
+    }
+
     function getTilte(code) {
         return (
             <span>
@@ -28,7 +56,7 @@ export default function CurrencyConverter({ curenciesStatus }) {
                     curenciesStatus.find(({ code }) => code === code) &&
                     <span>
                         <span className={`me-2 rounded-1 fi fi-${code.slice(0, 2)}`}></span>
-                        <span>{code.toUpperCase()} - {curenciesStatus.find(({ code }) => code === code).name}</span> 
+                        <span>{code.toUpperCase()} - {curenciesStatus.find(({ code }) => code === code).name}</span>
                     </span>
                 }
             </span>
@@ -41,7 +69,7 @@ export default function CurrencyConverter({ curenciesStatus }) {
             <DropdownButton
                 className="converter-dropden"
                 variant="success"
-                onSelect={(e) => {setSelected(e)}}
+                onSelect={onChangeSourceCurrency}
                 title={getTilte(selected)}>
                 {curenciesStatus.map((item, index) =>
                 (
@@ -58,7 +86,7 @@ export default function CurrencyConverter({ curenciesStatus }) {
             <DropdownButton
                 className="converter-dropden"
                 variant="success"
-                onSelect={(e) => {setSelectedTargetCurrency(e)}}
+                onSelect={onChangeTargetCurrency}
                 title={getTilte(selectedTargetCurrency)}>
                 {curenciesStatus.map((item, index) =>
                 (
