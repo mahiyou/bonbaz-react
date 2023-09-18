@@ -19,7 +19,7 @@ function Home() {
             try {
                 const res = await fetch('/mocks/currencies.json');
                 const data = await res.json()
-                setCurrencies(data.currencies);
+                sortCurrencies(data.currencies);
                 setCoins(data.golds.coins);
                 setCryptoCurrencies(data.crypto_currencies);
                 setTopCardCurrencies([
@@ -30,6 +30,7 @@ function Home() {
                     { name: "Euro / IRR", price: findPrice("Euro", data.currencies), icon: "/imgs/currencies/euro-card.svg", history: data.currencies.find(({ code }) => code === 'eur').history },
                     { name: "US Dollar / IRR", price: findPrice("US Dollar", data.currencies), icon: "/imgs/currencies/usdollar-card.svg", history: data.currencies.find(({ code }) => code === 'usd').history },
                 ]);
+                
             }
             catch (e) {
                 setServerError(true);
@@ -37,6 +38,10 @@ function Home() {
         }
         fetchData();
     }, [])
+
+    function sortCurrencies(currencies){
+        setCurrencies([currencies.find((currency) => currency.code === 'usd'),currencies.find((currency) => currency.code === 'eur'),...currencies]);
+    }
 
     function findPrice(curName, targetArray) {
         let index = targetArray.findIndex(cur => cur.name == curName)
