@@ -13,20 +13,23 @@ export default function Date() {
         <div className="bg-secondary my-4 p-3 rounded date">
             <Row>
                 <Col xs={12} lg={7}>
-                    <img
-                        className='d-inline mb-1'
-                        src="/imgs/dot-in-date.svg"
-                        width="22"
-                        alt="React Bootstrap logo"
-                    />
-                    <p className="sentence my-0 d-inline">Live price of gold, coin, dollars and Iranian currencies <span className="sub-sentence">*All prices are in Iranian Toman*</span></p>
+                    <div className='d-inline parent-for-circles'>
+                        <div className='d-inline-block white-circle-backgroind'>
+                        </div>
+                        <img
+                            className='d-inline red-circle'
+                            src="/imgs/dot-in-date.svg"
+                            width="22"
+                            alt="React Bootstrap logo" />
+                    </div>
+                    <p className="sentence ms-4 my-0 d-inline">Live price of gold, coin, dollars and Iranian currencies <span className="sub-sentence">*All prices are in Iranian Toman*</span></p>
                 </Col>
                 <Col xs={12} lg={5}>
                     <div className='date-content'>
                         <img
                             className='d-inline'
                             src="/imgs/flag-of-iran.svg"
-                            width="22"
+                            width="26"
                             alt="React Bootstrap logo"
                         />
                         <span className='ms-2 mb-3'>{date.format("dddd", ["Date"])}</span>

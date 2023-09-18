@@ -1,32 +1,75 @@
-.date{
-    .sentence{
+.date {
+    .parent-for-circles {
+        position: relative;
+
+        .white-circle-backgroind {
+            position: absolute;
+            margin: 0px;
+            width: 12.5px;
+            height: 12.5px;
+            border-radius: 50%;
+            background: white;
+            animation: white-circle-backgroind 1s ease infinite;
+            top: 5.5px;
+            left: 4px;
+        }
+
+        .red-circle {
+            position: absolute;
+            animation-duration: 0s;
+            top: 1px;
+        }
+    }
+
+    @keyframes white-circle-backgroind {
+        0% {
+            transform: scale(1, 1);
+        }
+
+        50% {
+            transform: scale(1.5, 1.5);
+        }
+
+        
+    }
+
+
+    .sentence {
         font-weight: 600;
-        .sub-sentence{
+
+        .sub-sentence {
             font-size: 12.5px;
             font-weight: 500;
         }
     }
-    .iran-flag{
+
+    .iran-flag {
         font-size: 20px;
     }
-    .persianDate{
+
+    .persianDate {
         font-size: 12.5px;
     }
-    .date-content{
+
+    .date-content {
         font-weight: 600;
         float: right;
     }
+
     @media(max-width:992px) {
-        .date-content{
+        .date-content {
             float: left;
             margin-top: 20px;
         }
     }
+
     @media(max-width:576px) {
         font-size: 14px;
-        .sub-sentence , .persianDate{
+
+        .sub-sentence,
+        .persianDate {
             font-size: 11px;
         }
-        
+
     }
 }
