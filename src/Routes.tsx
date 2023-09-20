@@ -7,7 +7,7 @@ import { Route, Routes as ReactRoutes } from 'react-router-dom'
 export default function Routes() {
     return (
         <ReactRoutes>
-            <Route path="/" exact element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/archive" element={<Archive />} />
             <Route path="/graph" element={<Graph />} />
             <Route path="/contact-us" element={<ContactUs />} />
