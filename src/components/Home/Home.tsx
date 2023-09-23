@@ -3,27 +3,11 @@ import Date from "../Date/Date";
 import Ads from "../Ads/Ads";
 import CurrencyConverter from "../CurrencyConverter/CurrencyConverter";
 import { useState, useEffect } from "react";
-import TableOfCurrencies from "../Table/TableOfCurrencies";
+import TableOfCurrencies from "../TableOfCurrencies/TableOfCurrencies";
+import TableOfCoins from "../TableOfCoins/TableOfCoins";
 import { Col, Container, Row, Alert } from "react-bootstrap";
+import { ICurrency, ICoin } from "../../interfaces.ts"
 import "./home.scss";
-
-interface currency {
-    name: string,
-    code: string,
-    count: number,
-    price_sell: string
-    price_buy: string,
-    updated_at: string,
-    history: []
-}
-
-interface coins {
-    name: string,
-    price_sell: string
-    price_buy: string,
-    updated_at: string,
-    history: []
-}
 
 interface topCardCurrencies {
     name: string,
@@ -50,7 +34,7 @@ async function fetchData() {
     }
 }
 
-function addRialToCurrencies(currencies: currency[]) {
+function addRialToCurrencies(currencies: ICurrency[]): ICurrency[] {
     return (
         [{
             code: "irr",
@@ -59,23 +43,29 @@ function addRialToCurrencies(currencies: currency[]) {
             price_buy: "1",
             count: 1,
             updated_at: "",
-            history: ""
+            history: []
         }, ...currencies,]
     )
 }
 
-function sortCurrencies(currencies: currency[]) {
-    return ([currencies.find((currency: currency) => currency.code === 'usd')!, currencies.find((currency: currency) => currency.code === 'eur')!, ...currencies]);
+function sortCurrencies(currencies: ICurrency[]) {
+    const priorities = ['usd', 'eur']
+    const sorted = currencies.sort((a, b) => {
+        let index1 = priorities.indexOf(a.code)
+        let index2 = priorities.indexOf(b.code)
+        return index1 == -1 ? 1 : index2 == -1 ? -1 : index1 - index2;
+    })
+    return (sorted);
 }
 
-function findPrice(curName: string, targetArray: coins[] | currency[]): string {
+function findPrice(curName: string, targetArray: ICoin[] | ICurrency[]): string {
     let index = targetArray.findIndex(cur => cur.name == curName)
     return targetArray[index].price_buy!;
 }
 
 function Home() {
-    const [currencies, setCurrencies] = useState<currency[]>([]);
-    const [coins, setCoins] = useState<coins[]>([]);
+    const [currencies, setCurrencies] = useState<ICurrency[]>([]);
+    const [coins, setCoins] = useState<ICoin[]>([]);
     const [topCardCurrencies, setTopCardCurrencies] = useState<topCardCurrencies[]>([]);
     const [cryptoCurrencies, setCryptoCurrencies] = useState<cryptoCurrencies[]>([]);
     const [serverError, setServerError] = useState(false);
@@ -90,9 +80,9 @@ function Home() {
                 { name: "Gold (Once)", price: data.golds.ounce.price, icon: "/imgs/currencies/gold-card.svg", history: data.golds.ounce.history },
                 { name: "Gold (Gram)", price: data.golds.gram.price, icon: "/imgs/currencies/gold-card.svg", history: data.golds.gram.history },
                 { name: "Gold (Mithqal)", price: data.golds.mithqal.price, icon: "/imgs/currencies/gold-card.svg", history: data.golds.mithqal.history },
-                { name: "Gold (Emami)", price: findPrice("emami", data.golds.coins), icon: "/imgs/currencies/gold-card.svg", history: data.golds.coins.find((obj: coins) => { return obj.name === "emami" }).history },
-                { name: "Euro / IRR", price: findPrice("Euro", data.currencies), icon: "/imgs/currencies/euro-card.svg", history: data.currencies.find((obj: currency) => { return obj.code === "eur" }).history },
-                { name: "US Dollar / IRR", price: findPrice("US Dollar", data.currencies), icon: "/imgs/currencies/usdollar-card.svg", history: data.currencies.find((obj: currency) => { return obj.code === "usd" }).history },
+                { name: "Gold (Emami)", price: findPrice("emami", data.golds.coins), icon: "/imgs/currencies/gold-card.svg", history: data.golds.coins.find((obj: ICoin) => { return obj.name === "emami" }).history },
+                { name: "Euro / IRR", price: findPrice("Euro", data.currencies), icon: "/imgs/currencies/euro-card.svg", history: data.currencies.find((obj: ICurrency) => { return obj.code === "eur" }).history },
+                { name: "US Dollar / IRR", price: findPrice("US Dollar", data.currencies), icon: "/imgs/currencies/usdollar-card.svg", history: data.currencies.find((obj: ICurrency) => { return obj.code === "usd" }).history },
             ]);
         })
             .catch((e) => {
@@ -128,16 +118,16 @@ function Home() {
                     <Col xs={12} lg={9}>
                         <Row>
                             <Col lg={6} xs={12} className="px-1">
-                                <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
+                                <TableOfCurrencies colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
                             </Col>
                             <Col lg={6} xs={12} className="px-1">
-                                <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
+                                <TableOfCurrencies colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
                             </Col>
                             <Col lg={6} xs={12} className="px-1">
-                                <TableOfCurrencies tableType="coin" colTitles={colTitleForEmamiCoins} curenciesStatus={firstHalfCoinsStatus} />
+                                <TableOfCoins colTitles={colTitleForEmamiCoins} coinsStatus={firstHalfCoinsStatus} />
                             </Col>
                             <Col lg={6} xs={12} className="px-1">
-                                <TableOfCurrencies tableType="coin" colTitles={colTitleForPersianCoins} curenciesStatus={secondHalfCoinsStatus} />
+                                <TableOfCoins colTitles={colTitleForPersianCoins} coinsStatus={secondHalfCoinsStatus} />
                             </Col>
                         </Row>
                     </Col>

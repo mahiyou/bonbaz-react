@@ -1,5 +1,5 @@
 import { Col, Container, Row, Alert } from "react-bootstrap";
-import TableOfCurrencies from "../Table/TableOfCurrencies";
+import TableOfCurrencies from "../TableOfCurrencies/TableOfCurrencies";
 import CalendarOfArchive from "../CalendarOfArchive/CalendarOfArchive"
 import { useState, useEffect } from "react";
 import "./archive.scss"

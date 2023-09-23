@@ -1,12 +1,17 @@
 import "./currencyConverter.scss"
 import { useState } from "react";
-import { DropdownButton, Dropdown, Form, Button } from "react-bootstrap";
+import { DropdownButton, Dropdown, Form, Alert } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightLeft, faUpDown } from '@fortawesome/free-solid-svg-icons'
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import { ICurrency } from "../../interfaces.ts"
+import { SelectCallback } from "@restart/ui/esm/types";
 
+type Props = {
+    curenciesStatus: ICurrency[];
+};
 
-export default function CurrencyConverter({ curenciesStatus }) {
+export default function CurrencyConverter({ curenciesStatus }: Props) {
 
     const [currencyAmount, setCurrencyAmount] = useState(0);
     const [targetCurrencyAmount, setTargetCurrencyAmount] = useState(0);
@@ -14,49 +19,77 @@ export default function CurrencyConverter({ curenciesStatus }) {
     const [selected, setSelected] = useState('usd');
     const [selectedTargetCurrency, setSelectedTargetCurrency] = useState('irr');
 
-    function getCurrencyByCode(code) {
-        return curenciesStatus.find((currency) => currency.code === code);
+    const [errorAllert, setErrorAlert] = useState(false)
+
+    function getCurrencyByCode(code: string) {
+        return curenciesStatus.find((currency: ICurrency) => currency.code === code);
     }
 
-    function convert(value) {
-        console.log('value', value)
+    function convert(value: number) {
         change(selected, selectedTargetCurrency, value, true);
     }
-    function convertReverse(value) {
+    function convertReverse(value: number) {
         change(selected, selectedTargetCurrency, value, false);
     }
 
-    function change(from, to, amount, isSource) {
+    function change(from: string, to: string, amount: number, isSource: boolean) {
         const fromCurrency = getCurrencyByCode(from);
+        if (fromCurrency === undefined) {
+            setErrorAlert(true);
+            return;
+        } else {
+            setErrorAlert(false);
+        }
         const toCurrency = getCurrencyByCode(to);
+        if (toCurrency === undefined) {
+            setErrorAlert(true);
+            return;
+        } else {
+            setErrorAlert(false);
+        }
 
         if (isSource) {
             setCurrencyAmount(amount);
-            setTargetCurrencyAmount((amount * fromCurrency.price_sell / toCurrency.price_sell));
+            setTargetCurrencyAmount((amount * parseInt(fromCurrency.price_sell) / parseFloat(toCurrency.price_sell)));
         } else {
             setTargetCurrencyAmount(amount);
-            setCurrencyAmount(amount * toCurrency.price_sell / fromCurrency.price_sell);
+            setCurrencyAmount(amount * parseInt(toCurrency.price_sell) / parseInt(fromCurrency.price_sell));
         }
     }
 
-    function onChangeSourceCurrency(value) {
+    const onChangeSourceCurrency: SelectCallback = (value) => {
+        if (value === null) {
+            return;
+        }
         setSelected(value);
         change(value, selectedTargetCurrency, currencyAmount, true);
     }
 
-    function onChangeTargetCurrency(value) {
+    const onChangeTargetCurrency: SelectCallback = (value) => {
+        if (value === null) {
+            return;
+        }
         setSelectedTargetCurrency(value);
         change(selected, value, currencyAmount, true);
     }
 
-    function getTilte(code) {
+    function findCurrencyName(curenciesStatus: ICurrency[], code: string) {
+        const cur = curenciesStatus.find(({ code }) => code === code);
+        if (cur === undefined) {
+            return;
+        } else {
+            return cur.name;
+        }
+    }
+
+    function getTilte(code: string) {
         return (
             <span>
                 {
                     curenciesStatus.find(({ code }) => code === code) &&
                     <span>
                         <span className={`me-2 rounded-1 fi fi-${code.slice(0, 2)}`}></span>
-                        <span>{code.toUpperCase()} - {curenciesStatus.find(({ code }) => code === code).name}</span>
+                        <span>{code.toUpperCase()} - {findCurrencyName(curenciesStatus, code)}</span>
                     </span>
                 }
             </span>
@@ -80,7 +113,7 @@ export default function CurrencyConverter({ curenciesStatus }) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" type="number" placeholder="0" min={0} value={currencyAmount} onChange={(e) => { convert(e.target.value) }} />
+            <Form.Control className="my-2 amountOfCurrencyInput" type="number" placeholder="0" min={0} value={currencyAmount} onChange={(e) => { convert(parseInt(e.target.value)) }} />
             <div className="m-4 d-flex justify-content-center text-customGreen"><FontAwesomeIcon size="2xl" className="up-icon-in-convert" icon={faUpDown} /></div>
             <div className="my-4">Currency I Want</div>
             <DropdownButton
@@ -97,7 +130,10 @@ export default function CurrencyConverter({ curenciesStatus }) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="number" min={0} value={targetCurrencyAmount} onChange={(e) => { convertReverse(e.target.value) }} />
+            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="number" min={0} value={targetCurrencyAmount} onChange={(e) => { convertReverse(parseInt(e.target.value)) }} />
+            {errorAllert && <Alert className="mt-3 bg-customRed white  text-center">
+                Invalide Input
+            </Alert>}
         </div>
 
     );
