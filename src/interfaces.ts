@@ -22,3 +22,17 @@ export interface ICoin {
     updated_at: string,
     history: IPriceHistory[]
 }
+
+export interface cryptoCurrencies {
+    name: string,
+    code: string,
+    price: string,
+    history: IPriceHistory[]
+}
+
+export interface topCardCurrencies {
+    name: string,
+    price: string,
+    icon: string,
+    history: IPriceHistory[]
+}

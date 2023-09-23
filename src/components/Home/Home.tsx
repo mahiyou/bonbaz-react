@@ -1,4 +1,5 @@
-import Card from "../Card/Card";
+import CardForImportantCurrencies from "../CardForImportantCurrencies/CardForImportantCurrencies.tsx";
+import CardForCryptoCurrencies from "../CardForCryptoCurrencies/CardForCryptoCurrencies.tsx";
 import Date from "../Date/Date";
 import Ads from "../Ads/Ads";
 import CurrencyConverter from "../CurrencyConverter/CurrencyConverter";
@@ -6,22 +7,8 @@ import { useState, useEffect } from "react";
 import TableOfCurrencies from "../TableOfCurrencies/TableOfCurrencies";
 import TableOfCoins from "../TableOfCoins/TableOfCoins";
 import { Col, Container, Row, Alert } from "react-bootstrap";
-import { ICurrency, ICoin } from "../../interfaces.ts"
+import { ICurrency, ICoin, cryptoCurrencies, topCardCurrencies } from "../../interfaces.ts"
 import "./home.scss";
-
-interface topCardCurrencies {
-    name: string,
-    price: string,
-    icon: string,
-    history: []
-}
-
-interface cryptoCurrencies {
-    name: string,
-    code: string,
-    price: string,
-    history: []
-}
 
 async function fetchData() {
     try {
@@ -111,7 +98,7 @@ function Home() {
                 </Alert>}
                 <div className="hidden-md-down text-center">
                     {topCardCurrencies.map((importantCurrency, index) =>
-                        <Card key={index} targetCurrency={"T"} currency={importantCurrency} icon={`/imgs/currencies/usd-card.svg`} />)}
+                        <CardForImportantCurrencies key={index} targetCurrency={"T"} currency={importantCurrency} />)}
                 </div>
                 <Date />
                 <Row className="justify-content-center">
@@ -136,8 +123,8 @@ function Home() {
                         <Ads />
                     </Col>
                 </Row>
-                <div className="hidden-lg-up my-4 text-center">{topCardCurrencies.map((importantCurrency, index) => <Card key={index} targetCurrency={"T"} currency={importantCurrency} icon={`/imgs/currencies/usd-card.svg`} />)}</div>
-                <div className="hidden-md-down my-4 text-center">{cryptoCurrencies.map((cryptoCurrency, index) => <Card key={index} targetCurrency={"$"} currency={cryptoCurrency} icon={`/imgs/currencies/usd-card.svg`} />)}</div>
+                <div className="hidden-lg-up my-4 text-center">{topCardCurrencies.map((importantCurrency, index) => <CardForImportantCurrencies key={index} targetCurrency={"T"} currency={importantCurrency}/>)}</div>
+                <div className="hidden-md-down my-4 text-center">{cryptoCurrencies.map((cryptoCurrency, index) => <CardForCryptoCurrencies key={index} targetCurrency={"$"} currency={cryptoCurrency}/>)}</div>
             </Container>
         </div>
     );

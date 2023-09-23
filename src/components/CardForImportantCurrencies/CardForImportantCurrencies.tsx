@@ -1,18 +1,17 @@
 import { Card, Col, Row } from "react-bootstrap";
-import { AreaChart, Area, linearGradient, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import './card.scss'
+import { AreaChart, Area, YAxis } from 'recharts';
+import { topCardCurrencies } from "../../interfaces.ts"
+import './cardForImportantCurrencies.scss'
 
-function CardContent({ currency, targetCurrency, icon }) {
+type Props = {
+    targetCurrency : string,
+    currency: topCardCurrencies,
+}
+
+export default function CardContentForImportantCurrencies({ currency, targetCurrency }: Props) {
     let trendDiv;
-    let localIcon;
     let chartColor = "white";
 
-    if (currency.icon) {
-        localIcon = currency.icon;
-    } else {
-        localIcon = icon;
-    }
-    
     const id = Math.random().toString(32).substring(2);
 
     if (parseInt(currency.price) > parseInt(currency.history[currency.history.length - 1].price_buy)) {
@@ -31,20 +30,21 @@ function CardContent({ currency, targetCurrency, icon }) {
                         <Col xs={2}>
                             <img
                                 className="mb-3 ms-2"
-                                src={localIcon}
+                                src={currency.icon}
                                 width="20"
                                 alt="React Bootstrap logo"
                             />
                         </Col>
                         <Col xs={10} className="text-start">
                             <Card.Title>
-                                {currency.name} {currency.code && `/ ${currency.code}`}
+                                {currency.name} 
+                                {/* {currency.code && `/ ${currency.code}`} */}
                                 {trendDiv}
                             </Card.Title>
                             <Card.Subtitle>{Number(currency.price).toLocaleString()} <span className="currency-color">{targetCurrency}</span></Card.Subtitle>
                         </Col>
                         <AreaChart
-                            opacity={0.3}
+                            style={{opacity : 0.3}}
                             width={171}
                             height={70}
                             data={currency.history}
@@ -61,7 +61,7 @@ function CardContent({ currency, targetCurrency, icon }) {
                                     <stop offset="95%" stopColor={chartColor} stopOpacity={0} />
                                 </linearGradient>
                             </defs>
-                            <Area type="monotone" dataKey="price_buy" stroke={chartColor} fill={"url(#"+id+")"} />
+                            <Area type="monotone" dataKey="price_buy" stroke={chartColor} fill={"url(#" + id + ")"} />
                             <YAxis type="number" tick={false} axisLine={false} domain={['dataMin', 'dataMax']} />
                         </AreaChart>
                     </Row>
@@ -70,4 +70,3 @@ function CardContent({ currency, targetCurrency, icon }) {
         </div>
     )
 }
-export default CardContent;
