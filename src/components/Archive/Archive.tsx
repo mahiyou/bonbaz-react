@@ -1,14 +1,47 @@
 import { Col, Container, Row, Alert } from "react-bootstrap";
 import TableOfCurrencies from "../TableOfCurrencies/TableOfCurrencies";
+import TableOfCoins from "../TableOfCoins/TableOfCoins";
 import CalendarOfArchive from "../CalendarOfArchive/CalendarOfArchive"
 import { useState, useEffect } from "react";
+import { ICurrency, ICoin } from "../../interfaces.ts"
 import "./archive.scss"
+
+async function fetchData() {
+    try {
+        const res = await fetch('/mocks/currencies.json');
+        const data = await res.json()
+        return data;
+    }
+    catch (e) {
+        return e
+    }
+}
+
+function sortCurrencies(currencies: ICurrency[]) {
+    const priorities = ['usd', 'eur']
+    const sorted = currencies.sort((a, b) => {
+        let index1 = priorities.indexOf(a.code)
+        let index2 = priorities.indexOf(b.code)
+        return index1 == -1 ? 1 : index2 == -1 ? -1 : index1 - index2;
+    })
+    return (sorted);
+}
 
 export default function Archive() {
 
-    const [currencies, setCurrencies] = useState([]);
-    const [coins, setCoins] = useState([]);
+    const [currencies, setCurrencies] = useState<ICurrency[]>([]);
+    const [coins, setCoins] = useState<ICoin[]>([])
     const [serverError, setServerError] = useState(false);
+    
+    useEffect(() => {
+        fetchData().then((data)=>{
+            setCurrencies(sortCurrencies(data.currencies));
+            setCoins(data.golds.coins);
+        })
+        .catch(()=>{
+            setServerError(true);
+        })  
+    }, [])
 
     const [colTitleForCurrencies] = useState(['Code', 'Currency', 'Sell', 'Buy'])
     const [colTitleForEmamiCoins] = useState(['Emami coins', 'Sell', 'Buy'])
@@ -22,33 +55,11 @@ export default function Archive() {
     const firstHalfCoinsStatus = coins.slice(0, halfCoinsStatus)
     const secondHalfCoinsStatus = coins.slice(halfCoinsStatus)
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const res = await fetch('/mocks/currencies.json');
-                const data = await res.json()
-                setCurrencies(data.currencies);
-                setCoins(data.golds.coins);
-            }
-            catch (e) {
-                setServerError(true);
-            }
-        }
-        fetchData();
-    }, [])
-
-    async function getDataOfThisDate(calendarType, date) {
+    async function getDataOfThisDate(date: string) {
         try {
-            const res = '';
-            if (calendarType == "gregorian") {
-                console.log(date);
-                res = await fetch(`/mocks/currencies.json?date="${date}"`);
-            } else if (calendarType == "jalali") {
-                console.log(date);
-                res = await fetch(`/mocks/currencies.json?jalali_date="${date}"`);
-            }
+            const res = await fetch(`/mocks/currencies.json?date="${date}"`);
             const data = await res.json()
-            setCurrencies(data.currencies);
+            setCurrencies(sortCurrencies(data.currencies));
             setCoins(data.golds.coins);
         }
         catch (e) {
@@ -67,16 +78,16 @@ export default function Archive() {
                 <Col xs={12} xl={9}>
                     <Row>
                         <Col lg={6} xs={12} className="px-1">
-                            <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
+                            <TableOfCurrencies colTitles={colTitleForCurrencies} curenciesStatus={firstHalfCurenciesStatus} />
                         </Col>
                         <Col lg={6} xs={12} className="px-1">
-                            <TableOfCurrencies tableType="currency" colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
+                            <TableOfCurrencies colTitles={colTitleForCurrencies} curenciesStatus={secondHalfCurenciesStatus} />
                         </Col>
                         <Col lg={6} xs={12} className="px-1">
-                            <TableOfCurrencies tableType="coin" colTitles={colTitleForEmamiCoins} curenciesStatus={firstHalfCoinsStatus} />
+                            <TableOfCoins colTitles={colTitleForEmamiCoins} coinsStatus={firstHalfCoinsStatus} />
                         </Col>
                         <Col lg={6} xs={12} className="px-1">
-                            <TableOfCurrencies tableType="coin" colTitles={colTitleForPersianCoins} curenciesStatus={secondHalfCoinsStatus} />
+                            <TableOfCoins colTitles={colTitleForPersianCoins} coinsStatus={secondHalfCoinsStatus} />
                         </Col>
                     </Row>
                 </Col>

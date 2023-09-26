@@ -8,17 +8,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 import "./calendarOfArchive.scss"
 
-export default function CalendarOffArchive({getDataOfThisDate}) {
+type Prop = {
+    getDataOfThisDate: (arg0: string) => void
+};
+
+export default function CalendarOffArchive({ getDataOfThisDate }: Prop) {
     const [calendarType, setCalendarType] = useState("gregorian");
     const [clickedDate, setClickedDate] = useState(new DateObject());
     const [clickedDatePersian, setClickedDatePersian] = useState(new DateObject({ calendar: persian, locale: persian_en }));
-function sendDate(){
-    if(calendarType == "gregorian"){
-        getDataOfThisDate("gregorian",new DateObject(clickedDate).format());
-    }else if(calendarType == "jalali"){
-        getDataOfThisDate("jalali",new DateObject(clickedDatePersian).format());
+    function sendDate() {
+        if (calendarType == "gregorian") {
+            getDataOfThisDate(new DateObject(clickedDate).format());
+        } else if (calendarType == "jalali") {
+            getDataOfThisDate(new DateObject(clickedDatePersian).convert(undefined).format());
+        }
     }
-}
     return (
         <div className="calendar mb-4">
             <h5 className="text-customRed mb-4">Select a date:</h5>
@@ -49,7 +53,11 @@ function sendDate(){
                     <Calendar
                         value={clickedDate}
                         className="calendar-width customColor bg-primary justify-content-center"
-                        onChange={setClickedDate} />
+                        onChange={(dateObject) => {
+                            if (dateObject instanceof DateObject) {
+                                setClickedDate(dateObject);
+                            }
+                        }} />
                 }
                 {calendarType == "jalali" &&
                     <Calendar
@@ -57,7 +65,11 @@ function sendDate(){
                         calendar={persian}
                         locale={persian_en}
                         className="calendar-width customColor bg-primary"
-                        onChange={setClickedDatePersian} />
+                        onChange={(dateObject) => {
+                            if (dateObject instanceof DateObject) {
+                                setClickedDatePersian(dateObject)
+                            }
+                        }} />
                 }
             </div>
         </div>

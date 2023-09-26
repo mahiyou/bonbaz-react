@@ -2,7 +2,7 @@
 export interface IPriceHistory {
     price_buy: string,
     price_sell: string,
-    updated_a: string,
+    updated_at: string,
 }
 
 export interface ICurrency {

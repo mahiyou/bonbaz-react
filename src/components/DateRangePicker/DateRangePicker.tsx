@@ -4,11 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import DatePicker, { DateObject } from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian"
 import persian_en from "react-date-object/locales/persian_en"
-
+import { IPriceHistory, ICurrency } from "../../interfaces.ts"
 import { useState, useEffect } from "react";
 import './DateRangePicker.scss';
+import { keyboardImplementationWrapper } from "@testing-library/user-event/dist/keyboard/index";
+import { array } from "yup";
 
-function CurrencyOption({currency}) {
+type Props = {
+    currency : ICurrency
+}
+function CurrencyOption({currency}:Props) {
     return (
         <span>
             <span className={`me-2 rounded-1 fi fi-${currency.code.slice(0, 2)}`}></span>
@@ -17,16 +22,19 @@ function CurrencyOption({currency}) {
     );
 }
 
-/**
- * @param {{onChange: (currency: {code:string,name: string}, calendar: string, fromDate: DateObject, toDate: DateObject) => any}} props 
- */
-export default function DateRangePicker(props) {
-    const { onChange,currencies } = props;
+
+type DateProps = {
+    onChange : (currency: { code: string, name: string }, calendar: string, fromDate: string, toDate: string) => any
+    currencies : ICurrency[]
+}
+
+
+export default function DateRangePicker({ onChange, currencies} : DateProps) {
     const [serverError, setServerError] = useState(false);
     const [selected, setSelected] = useState({ key: 0, eventKey: 0 });
-    const [selectedCalendar, setSelectedCalendar] = useState('Gregorian');
-    const [date, setDate] = useState(new DateObject())
-    const [targetDate, setTargetDate] = useState(new DateObject())
+    const [selectedCalendar, setSelectedCalendar] = useState<string>('Gregorian');
+    const [date, setDate] = useState<string>(new DateObject().format())
+    const [targetDate, setTargetDate] = useState<string>(new DateObject().format())
 
     let calendar;
     let locale;
@@ -35,6 +43,26 @@ export default function DateRangePicker(props) {
         calendar = persian;
         locale = persian_en;
     }
+
+    function onSelect(key: string | null, e: React.SyntheticEvent<unknown, Event>) {
+        if (null == key || (e.target as any).value === undefined) {
+            return
+        }
+
+        setSelected({ key: parseInt(key), eventKey: (e.target as any).value });
+    }
+
+    function onDateChange(selectedDates: DateObject | DateObject[] | null) {
+        if (selectedDates instanceof DateObject){
+            setDate(selectedDates.format());
+        }     
+    }
+    function onTargetDateChange(selectedDates: DateObject | DateObject[] | null) {
+        if (selectedDates instanceof DateObject){
+            setTargetDate(selectedDates.format());
+        }     
+    }
+    
 
     return (
         <div className="date-range-picker">
@@ -47,7 +75,7 @@ export default function DateRangePicker(props) {
                     <DropdownButton
                         className="currnecies-dropden"
                         variant="success"
-                        onSelect={(key, e) => setSelected({ key, value: e.target.value })}
+                        onSelect={onSelect}
                         title={currencies.length ? <CurrencyOption currency={currencies[selected.key]} /> : ''}>
                         {currencies.map((item, index) =>
                         (
@@ -68,7 +96,7 @@ export default function DateRangePicker(props) {
                     <DropdownButton
                         className="currnecies-dropden"
                         variant="success"
-                        onSelect={setSelectedCalendar}
+                        onSelect={(event) => setSelectedCalendar(event ?? '')}
                         title={selectedCalendar}>
                         <Dropdown.Item eventKey={"Jalali"}>Jalali</Dropdown.Item>
                         <Dropdown.Item eventKey={"Gregorian"}>Gregorian</Dropdown.Item>
@@ -80,7 +108,7 @@ export default function DateRangePicker(props) {
                     <div className="text-secondary">From</div>
                 </Col>
                 <Col xs={10}>
-                    <DatePicker calendar={calendar} locale={locale} offsetY={3} className="customColor" arrow={false} value={targetDate} inputClass="custom-input" format="YYYY . MM . DD" onChange={setDate} />
+                    <DatePicker calendar={calendar} locale={locale} offsetY={3} className="customColor" arrow={false} value={date} inputClass="custom-input"  onChange={onDateChange} />
                 </Col>
             </Row>
             <Row className="my-3 align-items-center">
@@ -88,7 +116,7 @@ export default function DateRangePicker(props) {
                     <div className="text-secondary">To</div>
                 </Col>
                 <Col xs={10}>
-                    <DatePicker calendar={calendar} locale={locale} offsetY={3} className="customColor" arrow={false} value={targetDate} inputClass="custom-input" format="YYYY . MM . DD" onChange={setTargetDate} />
+                    <DatePicker calendar={calendar} locale={locale} offsetY={3} className="customColor" arrow={false} value={targetDate} inputClass="custom-input" onChange={onTargetDateChange} />
                 </Col>
             </Row>
             <Row>
