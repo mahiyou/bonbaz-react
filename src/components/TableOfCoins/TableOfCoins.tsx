@@ -9,7 +9,7 @@ type Props = {
     colTitles: string[]
 }
 
-export default function TableOfCoins({ coinsStatus, colTitles } : Props) {
+export default function TableOfCoins({ coinsStatus, colTitles }: Props) {
 
     return (
         <Table responsive className="table mb-4">
@@ -28,7 +28,7 @@ export default function TableOfCoins({ coinsStatus, colTitles } : Props) {
                                 className="me-2 mb-1"
                                 src={`/imgs/currencies/coin.svg`}
                                 width="23"
-                                alt="flag"/>
+                                alt="flag" />
                             <span>{(currency.name).charAt(0).toUpperCase() + (currency.name).slice(1)}</span>
                         </td>
                         <td className="text-center">

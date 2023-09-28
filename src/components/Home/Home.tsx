@@ -24,8 +24,8 @@ async function fetchData() {
 function addRialToCurrencies(currencies: ICurrency[]): ICurrency[] {
     return (
         [{
-            code: "irr",
-            name: "Iranian Rial",
+            code: "irt",
+            name: "Iranian Toman",
             price_sell: "1",
             price_buy: "1",
             count: 1,
@@ -122,8 +122,8 @@ function Home() {
                         <Ads />
                     </Col>
                 </Row>
-                <div className="hidden-lg-up my-4 text-center">{topCardCurrencies.map((importantCurrency, index) => <CardForImportantCurrencies key={index} targetCurrency={"T"} currency={importantCurrency}/>)}</div>
-                <div className="hidden-md-down my-4 text-center">{cryptoCurrencies.map((cryptoCurrency, index) => <CardForCryptoCurrencies key={index} targetCurrency={"$"} currency={cryptoCurrency}/>)}</div>
+                <div className="hidden-lg-up my-4 text-center">{topCardCurrencies.map((importantCurrency, index) => <CardForImportantCurrencies key={index} targetCurrency={"T"} currency={importantCurrency} />)}</div>
+                <div className="hidden-md-down my-4 text-center">{cryptoCurrencies.map((cryptoCurrency, index) => <CardForCryptoCurrencies key={index} targetCurrency={"$"} currency={cryptoCurrency} />)}</div>
             </Container>
         </div>
     );

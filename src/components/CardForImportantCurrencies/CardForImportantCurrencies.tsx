@@ -38,7 +38,6 @@ export default function CardContentForImportantCurrencies({ currency, targetCurr
                         <Col xs={10} className="text-start">
                             <Card.Title>
                                 {currency.name} 
-                                {/* {currency.code && `/ ${currency.code}`} */}
                                 {trendDiv}
                             </Card.Title>
                             <Card.Subtitle>{Number(currency.price).toLocaleString()} <span className="currency-color">{targetCurrency}</span></Card.Subtitle>

@@ -4,7 +4,7 @@ import { cryptoCurrencies } from "../../interfaces.ts"
 import './cardForCryptoCurrencies.scss'
 
 type Props = {
-    targetCurrency : string,
+    targetCurrency: string,
     currency: cryptoCurrencies,
 }
 
@@ -37,14 +37,14 @@ export default function CardContentForCryptoCurrencies({ currency, targetCurrenc
                         </Col>
                         <Col xs={10} className="text-start">
                             <Card.Title>
-                                {currency.name} 
+                                {currency.name}
                                 {`/ ${currency.code}`}
                                 {trendDiv}
                             </Card.Title>
                             <Card.Subtitle>{Number(currency.price).toLocaleString()} <span className="currency-color">{targetCurrency}</span></Card.Subtitle>
                         </Col>
                         <AreaChart
-                            style={{opacity : 0.3}}
+                            style={{ opacity: 0.3 }}
                             width={171}
                             height={70}
                             data={currency.history}

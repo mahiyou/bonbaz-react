@@ -32,15 +32,15 @@ export default function Archive() {
     const [currencies, setCurrencies] = useState<ICurrency[]>([]);
     const [coins, setCoins] = useState<ICoin[]>([])
     const [serverError, setServerError] = useState(false);
-    
+
     useEffect(() => {
-        fetchData().then((data)=>{
+        fetchData().then((data) => {
             setCurrencies(sortCurrencies(data.currencies));
             setCoins(data.golds.coins);
         })
-        .catch(()=>{
-            setServerError(true);
-        })  
+            .catch(() => {
+                setServerError(true);
+            })
     }, [])
 
     const [colTitleForCurrencies] = useState(['Code', 'Currency', 'Sell', 'Buy'])
@@ -72,7 +72,7 @@ export default function Archive() {
                 <Col xs={11} md={6} sm={7} xl={3} >
                     <CalendarOfArchive getDataOfThisDate={getDataOfThisDate} />
                 </Col>
-                {serverError && <Alert className="bg-customRed white  text-center">
+                {serverError && <Alert className="bg-customRed white text-center">
                     Server dosn't response.Try again.
                 </Alert>}
                 <Col xs={12} xl={9}>

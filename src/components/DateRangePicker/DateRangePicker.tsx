@@ -11,9 +11,9 @@ import { keyboardImplementationWrapper } from "@testing-library/user-event/dist/
 import { array } from "yup";
 
 type Props = {
-    currency : ICurrency
+    currency: ICurrency
 }
-function CurrencyOption({currency}:Props) {
+function CurrencyOption({ currency }: Props) {
     return (
         <span>
             <span className={`me-2 rounded-1 fi fi-${currency.code.slice(0, 2)}`}></span>
@@ -24,12 +24,12 @@ function CurrencyOption({currency}:Props) {
 
 
 type DateProps = {
-    onChange : (currency: { code: string, name: string }, calendar: string, fromDate: string, toDate: string) => any
-    currencies : ICurrency[]
+    onChange: (currency: { code: string, name: string }, calendar: string, fromDate: string, toDate: string) => any
+    currencies: ICurrency[]
 }
 
 
-export default function DateRangePicker({ onChange, currencies} : DateProps) {
+export default function DateRangePicker({ onChange, currencies }: DateProps) {
     const [serverError, setServerError] = useState(false);
     const [selected, setSelected] = useState({ key: 0, eventKey: 0 });
     const [selectedCalendar, setSelectedCalendar] = useState<string>('Gregorian');
@@ -53,16 +53,16 @@ export default function DateRangePicker({ onChange, currencies} : DateProps) {
     }
 
     function onDateChange(selectedDates: DateObject | DateObject[] | null) {
-        if (selectedDates instanceof DateObject){
+        if (selectedDates instanceof DateObject) {
             setDate(selectedDates.format());
-        }     
+        }
     }
     function onTargetDateChange(selectedDates: DateObject | DateObject[] | null) {
-        if (selectedDates instanceof DateObject){
+        if (selectedDates instanceof DateObject) {
             setTargetDate(selectedDates.format());
-        }     
+        }
     }
-    
+
 
     return (
         <div className="date-range-picker">
@@ -108,7 +108,7 @@ export default function DateRangePicker({ onChange, currencies} : DateProps) {
                     <div className="text-secondary">From</div>
                 </Col>
                 <Col xs={10}>
-                    <DatePicker calendar={calendar} locale={locale} offsetY={3} className="customColor" arrow={false} value={date} inputClass="custom-input"  onChange={onDateChange} />
+                    <DatePicker calendar={calendar} locale={locale} offsetY={3} className="customColor" arrow={false} value={date} inputClass="custom-input" onChange={onDateChange} />
                 </Col>
             </Row>
             <Row className="my-3 align-items-center">

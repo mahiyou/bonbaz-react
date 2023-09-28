@@ -17,7 +17,7 @@ type Props = {
     y: number,
     calendarType: string,
     dateFormat: boolean[],
-    payload?: Payload< ValueType, NameType>
+    payload?: Payload<ValueType, NameType>
 }
 function CustomizedTick({ x, y, payload, calendarType, dateFormat }: Props) {
     const date = new DateObject({
@@ -49,7 +49,7 @@ type CusProps = {
     calendarType: string,
     active: boolean,
     label: string,
-    payload?: Payload< ValueType, NameType>[]
+    payload?: Payload<ValueType, NameType>[]
 }
 
 function CustomTooltip({ payload, label, active, calendarType }: CusProps) {
@@ -75,7 +75,7 @@ function CustomTooltip({ payload, label, active, calendarType }: CusProps) {
 }
 
 async function APICall(url: string, parameters: undefined | { fromDate: string, toDate: string }) {
-    const res = await fetch(url + (parameters ? "?" + (new URLSearchParams(parameters)): ""));
+    const res = await fetch(url + (parameters ? "?" + (new URLSearchParams(parameters)) : ""));
     return res.json();
 }
 
@@ -189,11 +189,9 @@ export default function Graph() {
                                         <Line type="monotone" name='Buy' dataKey="price_buy" stroke="#F55D6F" strokeWidth={2} dot={false} />
                                     </LineChart>
                                 </ResponsiveContainer>
-
                             )}
                         </div>
                     </div>
-
                 </Col>
                 <Col lg={4} xs={12}>
                     <Table responsive className="table">

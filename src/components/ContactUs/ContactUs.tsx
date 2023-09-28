@@ -2,7 +2,6 @@ import { Col, Container, Row, Alert } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik';
 import './contactus.scss'
 
@@ -63,7 +62,6 @@ const MyForm = withFormik<MyFormProps, FormValues>({
         };
     },
 
-    // Add a custom validation function (this can be async too!)
     validate: (values: FormValues) => {
         let errors: FormikErrors<FormValues> = {};
         if (!values.name) {

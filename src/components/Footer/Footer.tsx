@@ -10,11 +10,11 @@ function Footer() {
             <Row className="bg-primary mt-4 py-3 mx-0">
                 <Col className="text-center my-auto hidden-md-down" xs={12} md={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
-                    <a className="text-white text-decoration-none ms-2" href="#prices">Prices</a>
+                    <a className="text-white text-decoration-none ms-2" href="/">Prices</a>
                 </Col>
                 <Col className="text-center my-auto  hidden-md-down" xs={12} md={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
-                    <a className="text-white text-decoration-none ms-2" href="#archive">Archive</a>
+                    <a className="text-white text-decoration-none ms-2" href="/archive">Archive</a>
                 </Col>
                 <Col className="text-center" xs={12} md={4}>
                     <a href="/">
@@ -28,19 +28,19 @@ function Footer() {
                 </Col>
                 <Col className="text-center text-xs-left my-auto hidden-lg-up py-3 py-md-auto" xs={6} md={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
-                    <a className="text-white text-decoration-none ms-2" href="#prices">Prices</a>
+                    <a className="text-white text-decoration-none ms-2" href="/">Prices</a>
                 </Col>
                 <Col className="text-center my-auto hidden-lg-up py-3 py-md-auto" xs={6} md={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
-                    <a className="text-white text-decoration-none ms-2" href="#archive">Archive</a>
+                    <a className="text-white text-decoration-none ms-2" href="/archive">Archive</a>
                 </Col>
                 <Col className="text-center my-auto py-3 py-md-auto" xs={6} md={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
-                    <a className="text-white text-decoration-none ms-2" href="#graph">Graph</a>
+                    <a className="text-white text-decoration-none ms-2" href="/graph">Graph</a>
                 </Col>
                 <Col className="text-center my-auto py-3 py-md-auto" xs={6} md={2}>
                     <FontAwesomeIcon icon={faCircle} size="2xs"/>
-                    <a className="text-white text-decoration-none ms-2" href="#contact-us">Contact us</a>
+                    <a className="text-white text-decoration-none ms-2" href="/contact-us">Contact us</a>
                 </Col>
             </Row>
             <div className="text-center footer-sentence my-2">&copy; 2023 Bonbaz.com all rights reserved.</div>

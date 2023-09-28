@@ -30,8 +30,7 @@ export default function Date() {
                             className='d-inline'
                             src="/imgs/flag-of-iran.svg"
                             width="26"
-                            alt="React Bootstrap logo"
-                        />
+                            alt="React Bootstrap logo" />
                         <span className='ms-2 mb-3'>{date.format("dddd", ["Date"])}</span>
                         <span className='ms-2'>{datePersian.format()}</span>
                         <span className='ms-2 text-customRed persianDate'>{date.format("DD MMMM YYYY", ["Date"])}</span>

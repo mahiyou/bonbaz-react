@@ -113,7 +113,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" type="text" placeholder="0" value={Number(currencyAmount).toLocaleString()} onChange={(e) => { convert(Number((e.target.value).replace(/\D/g,''))) }} />
+            <Form.Control className="my-2 amountOfCurrencyInput" type="text" placeholder="0" value={Number(currencyAmount).toLocaleString()} onChange={(e) => { convert(Number((e.target.value).replace(/\D/g, ''))) }} />
             <div className="m-4 d-flex justify-content-center text-customGreen"><FontAwesomeIcon size="2xl" className="up-icon-in-convert" icon={faUpDown} /></div>
             <div className="my-4">Currency I Want</div>
             <DropdownButton
@@ -130,7 +130,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="text" value={Number(targetCurrencyAmount).toLocaleString()} onChange={(e) => { convertReverse(Number((e.target.value).replace(/\D/g,''))) }} />
+            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="text" value={Number(targetCurrencyAmount).toLocaleString()} onChange={(e) => { convertReverse(Number((e.target.value).replace(/\D/g, ''))) }} />
             {errorAllert && <Alert className="mt-3 bg-customRed white  text-center">
                 Invalide Input
             </Alert>}
