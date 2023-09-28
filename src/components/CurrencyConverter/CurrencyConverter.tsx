@@ -13,8 +13,8 @@ type Props = {
 
 export default function CurrencyConverter({ curenciesStatus }: Props) {
 
-    const [currencyAmount, setCurrencyAmount] = useState(0);
-    const [targetCurrencyAmount, setTargetCurrencyAmount] = useState(0);
+    const [currencyAmount, setCurrencyAmount] = useState("0");
+    const [targetCurrencyAmount, setTargetCurrencyAmount] = useState("0");
 
     const [selected, setSelected] = useState('usd');
     const [selectedTargetCurrency, setSelectedTargetCurrency] = useState('irr');
@@ -49,11 +49,11 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
         }
 
         if (isSource) {
-            setCurrencyAmount(amount);
-            setTargetCurrencyAmount((amount * parseInt(fromCurrency.price_sell) / parseFloat(toCurrency.price_sell)));
+            setCurrencyAmount(amount.toString());
+            setTargetCurrencyAmount((amount * parseInt(fromCurrency.price_sell) / parseFloat(toCurrency.price_sell)).toString());
         } else {
-            setTargetCurrencyAmount(amount);
-            setCurrencyAmount(amount * parseInt(toCurrency.price_sell) / parseInt(fromCurrency.price_sell));
+            setTargetCurrencyAmount(amount.toString());
+            setCurrencyAmount((amount * parseInt(toCurrency.price_sell) / parseInt(fromCurrency.price_sell)).toString());
         }
     }
 
@@ -62,7 +62,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
             return;
         }
         setSelected(value);
-        change(value, selectedTargetCurrency, currencyAmount, true);
+        change(value, selectedTargetCurrency, Number(currencyAmount), true);
     }
 
     const onChangeTargetCurrency: SelectCallback = (value) => {
@@ -70,7 +70,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
             return;
         }
         setSelectedTargetCurrency(value);
-        change(selected, value, currencyAmount, true);
+        change(selected, value, Number(currencyAmount), true);
     }
 
     function findCurrencyName(curenciesStatus: ICurrency[], code: string) {
@@ -113,7 +113,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" type="number" placeholder="0" min={0} value={currencyAmount} onChange={(e) => { convert(parseInt(e.target.value)) }} />
+            <Form.Control className="my-2 amountOfCurrencyInput" type="text" placeholder="0" value={Number(currencyAmount).toLocaleString()} onChange={(e) => { convert(Number((e.target.value).replace(/\D/g,''))) }} />
             <div className="m-4 d-flex justify-content-center text-customGreen"><FontAwesomeIcon size="2xl" className="up-icon-in-convert" icon={faUpDown} /></div>
             <div className="my-4">Currency I Want</div>
             <DropdownButton
@@ -130,7 +130,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
                 )
                 )}
             </DropdownButton>
-            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="number" min={0} value={targetCurrencyAmount} onChange={(e) => { convertReverse(parseInt(e.target.value)) }} />
+            <Form.Control className="my-2 amountOfCurrencyInput" placeholder="0" type="text" value={Number(targetCurrencyAmount).toLocaleString()} onChange={(e) => { convertReverse(Number((e.target.value).replace(/\D/g,''))) }} />
             {errorAllert && <Alert className="mt-3 bg-customRed white  text-center">
                 Invalide Input
             </Alert>}
