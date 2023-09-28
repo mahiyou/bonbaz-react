@@ -25,41 +25,44 @@ When developing components, you may want assets automatically compiled and the b
 Sometimes it’s helpful to know what all these different files are for…
 
 ```
+/
 ├─ public
 │   ├─ imgs
 │   │   └─ currencies
 │   └─ mocks
-└─ src
-    ├─ assets
-    ├─ components
-    │   ├─ Ads
-    │   ├─ Archive
-    │   ├─ CalendarOfArchive
-    │   ├─ CardForCryptoCurrencies
-    │   ├─ CardForImportantCurrencies
-    │   ├─ ContactUs
-    │   ├─ CurrencyConverter
-    │   ├─ Date
-    │   ├─ DateRangePicker
-    │   ├─ Footer
-    │   ├─ Graph
-    │   ├─ Home
-    │   ├─ Navbar
-    │   ├─ TableOfCoins
-    │   └─ TableOfCurrencies
-    │
-    ├─ app.css       
-    ├─ App.tsk        
-    ├─ custom.scss  
-    ├─ index.css      
-    ├─ index.tsx           
-    ├─ interfaces.ts     
-    ├─ react-app-env.d.ts
-    ├─ reportWebVitals.ts  
-    ├─ Router.tsx     
-    ├─ .gitignore           
-    ├─ package-lock-json     
-    ├─ package.json  
-    └─ tsconfig.json  
+├─ src
+│   ├─ assets
+│   ├─ components
+│   │   ├─ Ads
+│   │   ├─ Archive
+│   │   ├─ CalendarOfArchive
+│   │   ├─ CardForCryptoCurrencies
+│   │   ├─ CardForImportantCurrencies
+│   │   ├─ ContactUs
+│   │   ├─ CurrencyConverter
+│   │   ├─ Date
+│   │   ├─ DateRangePicker
+│   │   ├─ Footer
+│   │   ├─ Graph
+│   │   ├─ Home
+│   │   ├─ Navbar
+│   │   ├─ TableOfCoins
+│   │   └─ TableOfCurrencies
+│   │
+│   ├─ app.css       
+│   ├─ App.tsk        
+│   ├─ custom.scss  
+│   ├─ index.css      
+│   ├─ index.tsx           
+│   ├─ interfaces.ts     
+│   ├─ react-app-env.d.ts
+│   ├─ reportWebVitals.ts  
+│   └─ Router.tsx   
+│ 
+├─ .gitignore           
+├─ package-lock-json     
+├─ package.json  
+├─ tsconfig.json
+└─ README.md    
 ```
 
