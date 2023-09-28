@@ -4,11 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import DatePicker, { DateObject } from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian"
 import persian_en from "react-date-object/locales/persian_en"
-import { IPriceHistory, ICurrency } from "../../interfaces.ts"
-import { useState, useEffect } from "react";
+import { ICurrency } from "../../interfaces.ts"
+import { useState } from "react";
 import './DateRangePicker.scss';
-import { keyboardImplementationWrapper } from "@testing-library/user-event/dist/keyboard/index";
-import { array } from "yup";
 
 type Props = {
     currency: ICurrency
@@ -22,15 +20,12 @@ function CurrencyOption({ currency }: Props) {
     );
 }
 
-
 type DateProps = {
     onChange: (currency: { code: string, name: string }, calendar: string, fromDate: string, toDate: string) => any
     currencies: ICurrency[]
 }
 
-
 export default function DateRangePicker({ onChange, currencies }: DateProps) {
-    const [serverError, setServerError] = useState(false);
     const [selected, setSelected] = useState({ key: 0, eventKey: 0 });
     const [selectedCalendar, setSelectedCalendar] = useState<string>('Gregorian');
     const [date, setDate] = useState<string>(new DateObject().format())
@@ -62,7 +57,6 @@ export default function DateRangePicker({ onChange, currencies }: DateProps) {
             setTargetDate(selectedDates.format());
         }
     }
-
 
     return (
         <div className="date-range-picker">

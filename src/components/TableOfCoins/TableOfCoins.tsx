@@ -1,6 +1,5 @@
 import "./tableOfCoins.scss"
 import Table from "react-bootstrap/Table";
-import Badge from "react-bootstrap/Badge";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { ICoin } from "../../interfaces.ts"
 

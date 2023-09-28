@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row, Table } from 'react-bootstrap'
+import { Button, Col, Container, Row, Table, Alert } from 'react-bootstrap'
 import DateRangePicker from '../DateRangePicker/DateRangePicker'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
@@ -118,7 +118,7 @@ export default function Graph() {
             setCurrencyPrices(result);
             dataProcessing(result)
         } catch {
-            setServerError(true);
+            // setServerError(true);
         }
     }
     async function getCurrencies() {
@@ -224,6 +224,9 @@ export default function Graph() {
                     <div>Click below to get the data as an Excel file:</div>
                     <Button className='mt-3 dln-btn' color='white'><FontAwesomeIcon className='me-2' icon={faDownload} />Export</Button>
                 </Col>
+                {serverError && <Alert className="mt-3 bg-customRed white  text-center">
+                    Server Error
+                </Alert>}
             </Row>
         </Container>
     )
