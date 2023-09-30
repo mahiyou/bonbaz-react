@@ -1,7 +1,7 @@
 # Bonbaz
 
 <p align="center">
-<img src="https://github.com/mahiyou/bonbaz-react/blob/master/misc/first-page.jpg" width="300" text-align-center>
+<img src="https://github.com/mahiyou/bonbaz-react/blob/master/misc/first-page.jpg" width="250" text-align-center>
 </p>
 
 ## Requirements
