@@ -1,8 +1,11 @@
 # Bonbaz
 
-![first page](https://github.com/mahiyou/bonbaz-react/blob/master/misc/first-page.jpg?raw=true "first page")
+<p align="center">
+<img src="https://github.com/mahiyou/bonbaz-react/blob/master/misc/first-page.jpg" width="300" text-align-center>
+</p>
 
 ## Requirements
+Bonbaz is fronend of a site of currencies prices. All the prices comes from [bonbast](https://www.bonbast.com/). This site has some extra features compared with bonbast.
 Bonbaz is built with [react](https://react.dev/) using version 18.2.0 and [typescript](https://www.typescriptlang.org/) version 4.9.5.
 In this project we used some dependencies like react-bootstrap version 2.8.0 , formik version 2.4.4 , recharts version 2.8.0 , ...
 This project requires Node.js v18.17.0+ to be installed locally.
