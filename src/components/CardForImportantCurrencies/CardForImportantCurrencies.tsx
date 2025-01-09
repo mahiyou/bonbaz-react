@@ -32,7 +32,7 @@ export default function CardContentForImportantCurrencies({ currency, targetCurr
                                 className="mb-3 ms-2"
                                 src={currency.icon}
                                 width="20"
-                                alt="React Bootstrap logo"
+                                alt={currency.name}
                             />
                         </Col>
                         <Col xs={10} className="text-start">

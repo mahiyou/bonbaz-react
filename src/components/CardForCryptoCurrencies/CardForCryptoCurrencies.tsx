@@ -13,6 +13,7 @@ export default function CardContentForCryptoCurrencies({ currency, targetCurrenc
     let chartColor = "white";
 
     const id = Math.random().toString(32).substring(2);
+    const currencyIcon = `/imgs/currencies/${currency.code}-Card.svg`;
 
     if (parseInt(currency.price) > parseInt(currency.history[currency.history.length - 1].price_buy)) {
         trendDiv = <div className="up-trend" />;
@@ -30,9 +31,9 @@ export default function CardContentForCryptoCurrencies({ currency, targetCurrenc
                         <Col xs={2}>
                             <img
                                 className="mb-3 ms-2"
-                                src={`/imgs/currencies/${currency.code}-Card.svg`}
+                                src={currencyIcon}
                                 width="20"
-                                alt="React Bootstrap logo"
+                                alt={currency.code}
                             />
                         </Col>
                         <Col xs={10} className="text-start">
