@@ -13,7 +13,7 @@ export default function CardContentForCryptoCurrencies({ currency, targetCurrenc
     let chartColor = "white";
 
     const id = Math.random().toString(32).substring(2);
-    const currencyIcon = `/imgs/currencies/${currency.code}-Card.svg`;
+    const currencyIcon = `/imgs/currencies/${currency.code.toLowerCase()}-card.svg`;
 
     if (parseInt(currency.price) > parseInt(currency.history[currency.history.length - 1].price_buy)) {
         trendDiv = <div className="up-trend" />;
