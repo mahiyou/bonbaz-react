@@ -12,12 +12,17 @@ import { IPriceHistory, ICurrency } from "../../interfaces.ts"
 import { Payload, ValueType, NameType } from 'recharts/types/component/DefaultTooltipContent';
 import './graph.scss';
 
-type Props = {
+interface Props {
     x: number,
     y: number,
     calendarType: string,
     dateFormat: boolean[],
     payload?: Payload<ValueType, NameType>
+}
+interface IChartData {
+    price_buy: string;
+    price_sell: string;
+    updated_at: string;
 }
 function CustomizedTick({ x, y, payload, calendarType, dateFormat }: Props) {
     const date = new DateObject({
@@ -25,7 +30,7 @@ function CustomizedTick({ x, y, payload, calendarType, dateFormat }: Props) {
         format: 'YYYY-MM-DD hh:mm:ss',
         date: payload!.value!.toString(),
     });
-    if (calendarType == "Jalali") {
+    if (calendarType === "Jalali") {
         date.convert(persian, persian_en)
     }
     return (
@@ -59,7 +64,7 @@ function CustomTooltip({ payload, label, active, calendarType }: CusProps) {
             format: 'YYYY-MM-DD hh:mm:ss',
             date: label,
         });
-        if (calendarType == "Jalali") {
+        if (calendarType === "Jalali") {
             date.convert(persian, persian_en)
         }
         return (
@@ -79,73 +84,83 @@ async function APICall(url: string, parameters: undefined | { fromDate: string, 
     return res.json();
 }
 
-async function fetchChartData(fromDate: string, toDate: string) {
+function fetchChartData(fromDate: string, toDate: string): Promise<IChartData[]> {
     return APICall("/mocks/currencyGraph.json", { fromDate, toDate });
 }
-async function fetchCurrencyPickerData() {
+function fetchCurrencyPickerData(): Promise<{ currencies: ICurrency[] }> {
     return APICall("/mocks/currencies.json", undefined);
 }
 
 
 function getAverage(prices: IPriceHistory[], type: string) {
     return prices
-        .map((p) => parseInt(type == 'sell' ? p.price_sell : p.price_buy))
+        .map((p) => parseInt(type === 'sell' ? p.price_sell : p.price_buy))
         .reduce((p, c) => p + c, 0) / prices.length || 0;
 }
 
 function getMax(prices: IPriceHistory[], type: string) {
-    return Math.max(...prices.map((p) => parseInt(type == 'sell' ? p.price_sell : p.price_buy)), 0);
+    return Math.max(...prices.map((p) => parseInt(type === 'sell' ? p.price_sell : p.price_buy)), 0);
 }
 
 function getMin(prices: IPriceHistory[], type: string) {
-    return Math.min(...prices.map((p) => parseInt(type == 'sell' ? p.price_sell : p.price_buy)), Infinity);
+    return Math.min(...prices.map((p) => parseInt(type === 'sell' ? p.price_sell : p.price_buy)), Infinity);
 }
 
 export default function Graph() {
     const [serverError, setServerError] = useState(false);
-    const [currencyPrices, setCurrencyPrices] = useState([]);
+    const [currencyPrices, setCurrencyPrices] = useState<IChartData[]>([]);
     const [currencies, setCurrencies] = useState<ICurrency[]>([]);
     const [calendarType, setCalendarType] = useState('Gregorian');
     const [dateFormat, setDateFormat] = useState([false, false]);
+    const now = new DateObject().format();
+    const [dateRange, setDateRange] = useState({ from: now, to: now });
     const [chartTitle, setChartTitle] = useState<{ code: string, name: string }>({ code: 'aed', name: 'UAE Dirham' });
     const formatter = (value: number) => value.toLocaleString();
 
-    async function getDataFromServer(currency: { code: string, name: string }, calendar: string, fromDate: string, toDate: string) {
-        setChartTitle(currency);
-        setCalendarType(calendar);
-        try {
-            const result = await fetchChartData(fromDate, toDate);
-            setCurrencyPrices(result);
-            dataProcessing(result)
-        } catch {
-            // setServerError(true);
-        }
-    }
-    async function getCurrencies() {
-        try {
-            const result = await fetchCurrencyPickerData();
-            setCurrencies(result.currencies);
+    const dataProcessing = (currencyPrices: IPriceHistory[]) => {
+        for (let i = 0; i < currencyPrices.length - 1; i++) {
+            const current = new DateObject({ date: currencyPrices[i].updated_at });
+            const next = new DateObject({ date: currencyPrices[i + 1].updated_at });
 
-        } catch {
-            setServerError(true);
-        }
-    }
-    function dataProcessing(currencyPrices: IPriceHistory[]) {
-        for (let i = 0; i < currencyPrices.length; i++) {
-            if (new DateObject({ date: currencyPrices[i].updated_at }).month.number != new DateObject({ date: currencyPrices[i + 1].updated_at }).month.number) {
+            if (current.month.number !== next.month.number) {
                 setDateFormat([true, false])
             }
-            if (new DateObject({ date: currencyPrices[i].updated_at }).year != new DateObject({ date: currencyPrices[i + 1].updated_at }).year) {
+            if (current.year !== next.year) {
                 setDateFormat([true, true])
             }
         }
     }
+    
+    const dateRangePickerUpdate = (currency: { code: string, name: string }, calendar: string, from: string, to: string) => {
+        setChartTitle(currency);
+        setCalendarType(calendar);
+        setDateRange({from, to});
+    }
 
     useEffect(() => {
-        const now = new DateObject().format();
-        getDataFromServer(chartTitle, calendarType, now, now);
+        const getDataFromServer = async () => {
+            try {
+                const result = await fetchChartData(dateRange.from, dateRange.to);
+                setCurrencyPrices(result);
+                dataProcessing(result)
+            } catch {
+                setServerError(true);
+            }
+        };
+    
+        const getCurrencies = async () => {
+            try {
+                const result = await fetchCurrencyPickerData();
+                setCurrencies(result.currencies);
+            } catch {
+                setServerError(true);
+            }
+        }
+
+        getDataFromServer();
         getCurrencies();
-    }, []);
+
+    }, [dateRange, calendarType, chartTitle]);
 
     const minSell = getMin(currencyPrices, "sell");
     const minBuy = getMin(currencyPrices, "buy");
@@ -157,7 +172,7 @@ export default function Graph() {
         <Container className='graph'>
             <Row>
                 <Col lg={5} md={8} xs={12}>
-                    <DateRangePicker onChange={getDataFromServer} currencies={currencies} />
+                    <DateRangePicker onChange={dateRangePickerUpdate} currencies={currencies} />
                 </Col>
             </Row>
             <Row className='mt-5 mb-5'>

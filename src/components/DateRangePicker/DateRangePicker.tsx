@@ -34,7 +34,7 @@ export default function DateRangePicker({ onChange, currencies }: DateProps) {
     let calendar;
     let locale;
 
-    if (selectedCalendar == "Jalali") {
+    if (selectedCalendar === "Jalali") {
         calendar = persian;
         locale = persian_en;
     }

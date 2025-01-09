@@ -40,7 +40,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
             <div className="mt-4 mb-4 form-group d-grid gap-2">
                 <button type="submit" className="btn btn-primary bg-customGreen fw-bold rounded-3" disabled={isSubmitting}><FontAwesomeIcon className="me-2" icon={faPaperPlane} />{isSubmitting ? "Please wait..." : "Send Message"}</button>
             </div>
-            {status == 'serverError' && <Alert className="bg-customRed white  text-center">
+            {status === 'serverError' && <Alert className="bg-customRed white  text-center">
                 Server dosn't response.Try again.
             </Alert>}
         </Form>

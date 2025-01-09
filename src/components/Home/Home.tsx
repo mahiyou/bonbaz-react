@@ -40,13 +40,13 @@ function sortCurrencies(currencies: ICurrency[]) {
     const sorted = currencies.sort((a, b) => {
         let index1 = priorities.indexOf(a.code)
         let index2 = priorities.indexOf(b.code)
-        return index1 == -1 ? 1 : index2 == -1 ? -1 : index1 - index2;
+        return index1 === -1 ? 1 : index2 === -1 ? -1 : index1 - index2;
     })
     return (sorted);
 }
 
 function findPrice(curName: string, targetArray: ICoin[] | ICurrency[]): string {
-    let index = targetArray.findIndex(cur => cur.name == curName)
+    let index = targetArray.findIndex(cur => cur.name === curName)
     return targetArray[index].price_buy!;
 }
 

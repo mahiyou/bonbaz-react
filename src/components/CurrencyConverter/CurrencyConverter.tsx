@@ -74,7 +74,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
     }
 
     function findCurrencyName(curenciesStatus: ICurrency[], code: string) {
-        const cur = curenciesStatus.find(({ code }) => code === code);
+        const cur = curenciesStatus.find((c) => c.code === code);
         if (cur === undefined) {
             return;
         } else {
@@ -86,7 +86,7 @@ export default function CurrencyConverter({ curenciesStatus }: Props) {
         return (
             <span>
                 {
-                    curenciesStatus.find(({ code }) => code === code) &&
+                    curenciesStatus.find((c) => c.code === code) &&
                     <span>
                         <span className={`me-2 rounded-1 fi fi-${code.slice(0, 2)}`}></span>
                         <span>{code.toUpperCase()} - {findCurrencyName(curenciesStatus, code)}</span>

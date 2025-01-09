@@ -29,7 +29,7 @@ export default function TableOfCurrencies({ curenciesStatus, colTitles }: Props)
                             <span>{(currency.code).toUpperCase()}</span>
                         </td>
                         <td className="text-center">
-                            {currency.count != 1 &&
+                            {currency.count !== 1 &&
                                 <Badge className="badge bg-transparent text-customRed">{currency.count}</Badge>
                             }
                             {currency.name}

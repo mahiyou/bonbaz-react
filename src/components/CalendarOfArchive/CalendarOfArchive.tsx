@@ -17,9 +17,9 @@ export default function CalendarOffArchive({ getDataOfThisDate }: Prop) {
     const [clickedDate, setClickedDate] = useState(new DateObject());
     const [clickedDatePersian, setClickedDatePersian] = useState(new DateObject({ calendar: persian, locale: persian_en }));
     function sendDate() {
-        if (calendarType == "gregorian") {
+        if (calendarType === "gregorian") {
             getDataOfThisDate(new DateObject(clickedDate).format());
-        } else if (calendarType == "jalali") {
+        } else if (calendarType === "jalali") {
             getDataOfThisDate(new DateObject(clickedDatePersian).convert(undefined).format());
         }
     }
@@ -28,8 +28,8 @@ export default function CalendarOffArchive({ getDataOfThisDate }: Prop) {
             <h5 className="text-customRed mb-4">Select a date:</h5>
             <Row>
                 <Col xs={8}>
-                    {calendarType == "gregorian" && <div className="input">{new DateObject(clickedDate).format()}</div>}
-                    {calendarType == "jalali" && <div className="input">{new DateObject(clickedDatePersian).format()}</div>}
+                    {calendarType === "gregorian" && <div className="input">{new DateObject(clickedDate).format()}</div>}
+                    {calendarType === "jalali" && <div className="input">{new DateObject(clickedDatePersian).format()}</div>}
                 </Col>
                 <Col className="ps-0" xs={4}><Button className="fw-bold button" variant="customGreen" onClick={sendDate}><FontAwesomeIcon className="me-1" icon={faMagnifyingGlass} size="sm" />Find</Button></Col>
             </Row>
@@ -49,7 +49,7 @@ export default function CalendarOffArchive({ getDataOfThisDate }: Prop) {
                         </Form.Control>
                     </Col>
                 </Row>
-                {calendarType == "gregorian" &&
+                {calendarType === "gregorian" &&
                     <Calendar
                         value={clickedDate}
                         className="calendar-width customColor bg-primary justify-content-center"
@@ -59,7 +59,7 @@ export default function CalendarOffArchive({ getDataOfThisDate }: Prop) {
                             }
                         }} />
                 }
-                {calendarType == "jalali" &&
+                {calendarType === "jalali" &&
                     <Calendar
                         value={clickedDatePersian}
                         calendar={persian}
